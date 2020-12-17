@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1018912250524",
+    "project_id": "manual-65c4c",
+    "storage_bucket": "manual-65c4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1018912250524:android:fe462d87fe6b12bceeeb59",
+        "android_client_info": {
+          "package_name": "com.manual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1018912250524-a6r3uai5sl29k779qseb98c39bqadjl6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcoe1M91jpDglsT4Jq-FBWdY1KdOgDWbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1018912250524-a6r3uai5sl29k779qseb98c39bqadjl6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1018912250524-7r0vql6mcf5snfl19chfagnt68j8fs5v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.devfirebase.manual"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
