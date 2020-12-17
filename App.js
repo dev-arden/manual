@@ -38,6 +38,9 @@ import counselmean from "./src/screens/counselmean";
 import counselmean2 from "./src/screens/counselmean2";
 import counselmean3 from "./src/screens/counselmean3";
 import counselmean4 from "./src/screens/counselmean4";
+import counselmean5 from "./src/screens/counselmean5";
+import counselmean6 from "./src/screens/counselmean6";
+import counselmean7 from "./src/screens/counselmean7";
 
 import counselfinish from "./src/screens/counselfinish";
 import counselenter from "./src/screens/counselenter";
@@ -139,6 +142,10 @@ const counselFlow = createStackNavigator(
     counselmean : counselmean,
     counselmean2 : counselmean2,
     counselmean3 : counselmean3,
+    counselmean4 : counselmean4,
+    counselmean5 : counselmean5,
+    counselmean6 : counselmean6,
+    counselmean7 : counselmean7,
     counselfinish : counselfinish,
     counselenter : counselenter,
     counselwrite : counselwrite,

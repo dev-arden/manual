@@ -1,11 +1,7 @@
-import React, { useState, useEffect }  from 'react';
-import {Text, View, StyleSheet, TouchableOpacity, FlatList, Image} from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-//import AsyncStorage from '@react-native-async-storage/async-storage';
+import React from 'react';
+import {Text, View, StyleSheet, Image} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-//import titlebar from '../components/titlebar';
-import {Button} from 'react-native-elements'
+import Buttonlist from '../components/Buttonlist';
 
 /**
  * 
@@ -28,24 +24,10 @@ const counselid9 = ({navigation}) => {
             style ={{height : 400, width : 330, resizeMode:'contain'}}
           />
         </View>
-        
-        <View>
-          <Button 
-            icon={
-              <AntDesign
-                name="right"
-                size={15}
-                color="#4189D6"
-              />
-            }
-            iconRight
-            type="outline"
-            titleStyle = {{fontSize : 23, fontWeight : 'bold'}}
-            buttonStyle = {style=styles.buttonstyle}
-            title = "다음"
-            onPress = {() => navigation.navigate('counselid10')}
-          />
-        </View>
+        <Buttonlist 
+          title="다음"
+          routename="counselid10"
+        />
       </View>
     </ScrollView>
   );

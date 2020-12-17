@@ -6,20 +6,23 @@ import Titlelist from '../components/Titlelist';
 import Buttonlist from '../components/Buttonlist';
 
 
-const counselmean4 = () => {
+const counselmean5 = () => {
   return (
     <ScrollView>
       <View style = {styles.viewstyle}>
         <Titlelist
-          title = "[사전연명의료의향서 작성]"
-          imageSource = {require('../../assets/care3.png')} 
+          title = "[사전연명의료의향서 작성의사 확인]"
+          imageSource = {require('../../assets/care4.png')} 
         />
         <Textlist
-          text = "또한 교통사고 등 갑작스런 사고로 인한 응급상황에서는 응급의료에 관한 법률에 따라 당연히 치료받습니다." 
+          text = "사전연명의료의향서는 OOO님이 자발적으로 작성하는 것이며 자발적 의사가 아닌 다른 이유로 고민되신다면 다시 한번 더 생각해보시길 바랍니다." 
+        />
+        <Textlist
+          text = "작성하시겠다면 의향서 내용에 대하여 설명드리겠습니다." 
         />
         <Buttonlist
           title = "다음"
-          routename = "counselmean5"
+          routename = "counselmean6"
         />
       </View>
     </ScrollView>
@@ -33,4 +36,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default counselmean4;
+export default counselmean5;

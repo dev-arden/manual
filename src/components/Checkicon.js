@@ -4,9 +4,9 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 
 const Checkicon = () => {
   return (
-    <View style={styles.iconstyle}>
-      <AntDesign name="check" size={25} color="blue"/>
-    </View>
+      <View style={styles.iconstyle}>
+        <AntDesign name="check" size={25} color="blue"/>
+      </View>
   );
 };
 

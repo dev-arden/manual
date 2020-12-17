@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {View, StyleSheet} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import Textlist from '../components/Textlist';
 import Titlelist from '../components/Titlelist';
-import Checkicon from '../components/Checkicon';
 import Buttonlist from '../components/Buttonlist';
 
 /**
  * 
  *  저는 보건복지부 지정을 받은 사전연명의료의향서 등록기관인 [기관명] 소속 상담사이며, 의향서 작성을 돕고 있습니다. 
    [상담자 신분증과 등록기관 지정서 제시
+  [사전연명의료의향서 작성의사 확인]
  */
 
 const counselmean3 = ({navigation}) => {
@@ -17,52 +17,20 @@ const counselmean3 = ({navigation}) => {
     <ScrollView>
       <View style = {styles.viewstyle}>
         <Titlelist
-          title = "[연명의료]"
-          imageSource = {require('../../assets/care1.png')} 
+          title = "[사전연명의료의향서 작성]"
+          imageSource = {require('../../assets/care2.png')} 
         />
-        <View style={styles.liststyle}>
-          <Checkicon />
-          <View style={{flexDirection : 'column'}}>
-            <Textlist
-              text = "사전연명의료" 
-            />
-          </View>
-        </View>
+        <Textlist
+          text = "작성은 무료이고 언제든지 변경하거나 취소할 수 있고,본인 동의없이 다른 사람은 내용을 알 수 없습니다." 
+        />
         <Buttonlist
           title = "다음"
-          routename = "coumselmean4"
+          routename = "counselmean4"
         />
       </View>
     </ScrollView>
   );
 };
-
-// class counselmean3 extends Component{
-//   render() {
-//     return (
-//           <ScrollView>
-//             <View style = {styles.viewstyle}>
-//               <Titlelist
-//                 title = "[연명의료]"
-//                 imageSource = {require('../../assets/care1.png')} 
-//               />
-//               <View style={styles.liststyle}>
-//                 <Checkicon />
-//                 <View style={{flexDirection : 'column'}}>
-//                   <Textlist
-//                     text = "사전연명의료" 
-//                   />
-//                 </View>
-//               </View>
-//               <Buttonlist
-//                 title = "다음"
-//                 routename = "counselmean"
-//               />
-//             </View>
-//           </ScrollView>
-//         );
-//   }
-// }
 
 const styles = StyleSheet.create({
   viewstyle:{

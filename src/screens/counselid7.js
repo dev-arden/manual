@@ -1,11 +1,9 @@
-import React, { useState, useEffect }  from 'react';
-import {Text, View, StyleSheet, TouchableOpacity, FlatList, Image} from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-//import AsyncStorage from '@react-native-async-storage/async-storage';
+import React from 'react';
+import {View, StyleSheet} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-//import titlebar from '../components/titlebar';
-import {Button} from 'react-native-elements'
+import Titlelist from '../components/Titlelist';
+import Textlist from '../components/Textlist';
+import Buttonlist from '../components/Buttonlist';
 
 /**
  * 
@@ -17,126 +15,29 @@ const counselid7 = ({navigation}) => {
   return (
     <ScrollView>
       <View style = {styles.viewstyle}>
-        <View style = {styles.btboxview}>
-            <Text style={styles.titlestyle} >
-              [개인정보 이용동의서]
-            </Text>
-        </View>
-        <View style={styles.newliststyle}>
-          <Image 
-            source = {require('../../assets/agree2.png')} 
-            style ={{height : 350, width : 330, resizeMode:'contain'}}
-          />
-        </View>
-        <View style={styles.liststyle}>
-          <View style={{alignSelf:"center"}}>
-            {/* {item.icon} */}
-            <AntDesign name="check" size={25} color="blue"/>
-          </View>
-          <View style={{flexDirection : 'column'}}>
-              <Text style={styles.textstyle}>
-                사전연명의료의향서 작성, 등록,
-              </Text>
-              <Text style={styles.textstyle}>
-                등록카드 발송을 위해
-              </Text>
-              <Text style={styles.textstyle}>
-                OOO님의 개인정보를 수집이용하고자 합니다.
-              </Text>
-              <Text style={styles.textstyle}>
-                다음의 내용을 충분히 읽어보신 후
-              </Text>
-              <Text style={styles.textstyle}>
-                동의해주시기 바랍니다.
-              </Text>
-          </View>
-        </View>
-  
-        <View>
-          <Button 
-            icon={
-              <AntDesign
-                name="right"
-                size={15}
-                color="#4189D6"
-              />
-            }
-            iconRight
-            type="outline"
-            titleStyle = {{fontSize : 23, fontWeight : 'bold'}}
-            buttonStyle = {style=styles.buttonstyle}
-            title = "다음"
-            onPress = {() => navigation.navigate('counselid8')}
-          />
-        </View>
+        <Titlelist 
+          title="개인정보 이용동의서"
+          imageSource={require('../../assets/agree2.png')} 
+        />
+        <Textlist 
+          text="사전연명의료의향서 작성, 등록, 등록카드 발송을 위해 OOO님의 개인정보를 수집이용하고자 합니다."
+        />
+        <Textlist 
+          text="다음의 내용을 충분히 읽어보신 후 동의해주시기 바랍니다."
+        />
+        <Buttonlist 
+          title="다음"
+          routename="counselid8"
+        />
       </View>
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  titlestyle:{
-    fontSize:25,
-    fontWeight:'bold', 
-    color:'black',
-    // borderWidth: 1,
-    // borderColor : 'black',
-    alignSelf : 'center'
-  },
-  btboxview:{
-    flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
-    height : 60,
-    margin : 15,
-    borderRadius : 20,
-    //alignSelf: 'center',
-    justifyContent : 'center',
-    // borderWidth:2,
-    // borderColor: 'black'
-  },
   viewstyle:{
     flex:1,
     justifyContent : 'center'
-  },
-  liststyle: {
-    marginHorizontal : 20,
-    marginVertical : 15,
-    fontSize : 20,
-    borderWidth : 1,
-    borderColor : 'white',
-    color : 'white',
-    backgroundColor : 'white',
-    paddingVertical: 30,
-    paddingHorizontal : 20,
-    flexDirection : 'row'
-  },
-  newliststyle: {
-    marginHorizontal : 20,
-    marginVertical : 15,
-    fontSize : 20,
-    borderWidth : 1,
-    borderColor : 'white',
-    color : 'white',
-    backgroundColor : 'white',
-    paddingVertical: 10,
-    paddingHorizontal : 10,
-    flexDirection : 'row',
-    justifyContent:'space-around'
-  },
-  textstyle:{
-    fontSize:20,
-    color:'black',
-    paddingHorizontal: 10,
-    flex:1,
-    margin : 10
-    //alignSelf: 'center'
-  },
-  buttonstyle : {
-    alignSelf: 'stretch',
-    marginHorizontal : 20,
-    marginBottom : 15,
-    borderWidth : 2,
-    // borderColor : 'black'
   }
 });
 

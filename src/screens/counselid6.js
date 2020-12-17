@@ -1,10 +1,14 @@
-import React, { useState, useEffect }  from 'react';
-import {Text, View, StyleSheet, TouchableOpacity, FlatList, Image} from 'react-native';
-import AntDesign from 'react-native-vector-icons/AntDesign';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-//import AsyncStorage from '@react-native-async-storage/async-storage';
+import React from 'react';
+import {View, StyleSheet, Text,Button} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import {Button} from 'react-native-elements'
+import Titlelist from '../components/Titlelist';
+import Textlist from '../components/Textlist';
+import Buttonlist from '../components/Buttonlist';
+import TitlewithoutImage from '../components/TitlewithoutImage';
+import Shorttext from '../components/Shoretext';
+import AntDesign from 'react-native-vector-icons/AntDesign';
+import Checkicon from '../components/Checkicon';
+import Exlist from '../components/Exlist';
 
 /**
  * 
@@ -16,146 +20,50 @@ const counselid6 = ({navigation}) => {
   return (
     <ScrollView>
       <View style = {styles.viewstyle}>
-        <View style = {styles.btboxview}>
-            <Text style={styles.titlestyle} >
-              [간편인지검사 항목]
-            </Text>
-        </View>
+        <TitlewithoutImage 
+          title="[간편인지검사 항목]"
+        />
         <View style={styles.liststyle}>
-          <View style={{alignSelf:"center"}}>
-            {/* {item.icon} */}
-            <AntDesign name="check" size={25} color="blue"/>
-          </View>
-          <View style={{flexDirection : 'column'}}>
-              <Text style={styles.textstyle}>
-                1. 올해가 몇 년도 인가요?
-              </Text>
-              <Text style={styles.textstyle}>
-                (정답 1점)
-              </Text>
-          </View>
-        </View>
-        <View style={styles.liststyle}>
-          <View style={{alignSelf:"center"}}>
-            {/* {item.icon} */}
-            <AntDesign name="check" size={25} color="blue"/>
-          </View>
-          <View style={{flexDirection : 'column'}}>
-              <Text style={styles.textstyle}>
-                2. 오늘이 몇 일인가요?
-              </Text>
-              <Text style={styles.textstyle}>
-                (정답 1점)
-              </Text>
-          </View>
-        </View>
-        <View style={styles.liststyle}>
-          <View style={{alignSelf:"center"}}>
-            {/* {item.icon} */}
-            <AntDesign name="check" size={25} color="blue"/>
-          </View>
-          <View style={{flexDirection : 'column'}}>
-              <Text style={styles.textstyle}>
-                3. 오늘이 무슨 요일인가요?
-              </Text>
-              <Text style={styles.textstyle}>
-                (정답 1점)
-              </Text>
-          </View>
-        </View>
-        <View style={styles.liststyle}>
-          <View style={{alignSelf:"center"}}>
-            {/* {item.icon} */}
-            <AntDesign name="check" size={25} color="blue"/>
-          </View>
-          <View style={{flexDirection : 'column'}}>
-              <Text style={styles.textstyle}>
-                4. 대한민국을 거꾸로 말씀해 보세요.
-              </Text>
-              <Text style={styles.textstyle}>
-                (정답 1점)
-              </Text>
-          </View>
-        </View>
-        <View style={styles.liststyle}>
-          <View style={{alignSelf:"center"}}>
-            {/* {item.icon} */}
-            <AntDesign name="exclamationcircleo" size={25} color="black"/>
-          </View>
-          <View style={{flexDirection : 'column'}}>
-              <Text style={styles.textstyle}>
-                한국형 간편인지검사(KO3DY):
-              </Text>
-              <Text style={styles.textstyle}>
-                4점 = 정상
-              </Text>
-              <Text style={styles.textstyle}>
-                3점 = 경도인지저하(mild)
-              </Text>
-              <Text style={styles.textstyle}>
-                2점 = 중등도인지저하(moderate)
-              </Text>
-              <Text style={styles.textstyle}>
-                1점 이하 = 중증도인지저하(severe)
-              </Text>
-          </View>
-        </View>
-        <View style={styles.liststyle}>
-          <View style={{alignSelf:"center"}}>
-            {/* {item.icon} */}
-            <AntDesign name="exclamationcircleo" size={25} color="black"/>
-          </View>
-          <View style={{flexDirection : 'column'}}>
-              <Text style={styles.textstyle}>
-                4점과 3점은 표준상담진행,
-              </Text>
-              <Text style={styles.textstyle}>
-                2점 이하는 인지맞춤상담진행
-              </Text>
-          </View>
-        </View>
-        <View>
-          <Button 
-            icon={
-              <AntDesign
-                name="right"
-                size={15}
-                color="#4189D6"
-              />
-            }
-            iconRight
-            type="outline"
-            titleStyle = {{fontSize : 23, fontWeight : 'bold'}}
-            buttonStyle = {style=styles.buttonstyle}
-            title = "다음"
-            onPress = {() => navigation.navigate('counselid7')}
+          <Checkicon />
+          <Shorttext 
+          text="1. 올해가 몇 년도 인가요? (정답 1점)"
           />
         </View>
-      </View>
+        <View style={styles.liststyle}>
+          <Checkicon />
+          <Shorttext 
+          text="2. 오늘이 몇 일인가요? (정답 1점)"
+          />
+        </View>
+        <View style={styles.liststyle}>
+          <Checkicon />
+          <Shorttext 
+          text="3. 오늘이 무슨 요일인가요? (정답 1점)"
+          />
+        </View>
+        <View style={styles.liststyle}>
+          <Checkicon />
+          <Shorttext 
+          text="4. 대한민국을 거꾸로 말씀해 보세요. (정답 1점)"
+          />
+        </View>
+        
+        <Exlist 
+          text="한국형 간편인지검사(KO3DY):4점=정상;3점=경도인지저하(mild);2점=중등도인지저하(moderate);1점이하=중증도인지저하(severe)"
+        />
+        <Exlist 
+          text="4점과 3점은 표준상담진행, 2점 이하는 인지맞춤상담"
+        />
+        <Buttonlist 
+          title="다음"
+          routename="counselid7"
+        />
+      </View>    
     </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
-  titlestyle:{
-    fontSize:25,
-    fontWeight:'bold', 
-    color:'black',
-    // borderWidth: 1,
-    // borderColor : 'black',
-    alignSelf : 'center'
-  },
-  btboxview:{
-    flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
-    height : 60,
-    margin : 15,
-    borderRadius : 20,
-    //alignSelf: 'center',
-    justifyContent : 'center',
-    // borderWidth:2,
-    // borderColor: 'black'
-  },
   viewstyle:{
     flex:1,
     justifyContent : 'center'
@@ -171,34 +79,6 @@ const styles = StyleSheet.create({
     paddingVertical: 30,
     paddingHorizontal : 20,
     flexDirection : 'row'
-  },
-  newliststyle: {
-    marginHorizontal : 20,
-    marginVertical : 15,
-    fontSize : 20,
-    borderWidth : 1,
-    borderColor : 'white',
-    color : 'white',
-    backgroundColor : 'white',
-    paddingVertical: 10,
-    paddingHorizontal : 10,
-    flexDirection : 'row',
-    justifyContent:'space-around'
-  },
-  textstyle:{
-    fontSize:20,
-    color:'black',
-    paddingHorizontal: 10,
-    flex:1,
-    margin : 10
-    //alignSelf: 'center'
-  },
-  buttonstyle : {
-    alignSelf: 'stretch',
-    marginHorizontal : 20,
-    marginBottom : 15,
-    borderWidth : 2,
-    // borderColor : 'black'
   }
 });
 
