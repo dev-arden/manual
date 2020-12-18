@@ -46,6 +46,28 @@ import counselfinish from "./src/screens/counselfinish";
 import counselenter from "./src/screens/counselenter";
 import counselwrite from "./src/screens/counselwrite";
 import counseltalk from "./src/screens/counseltalk";
+import counseltalk2 from "./src/screens/counseltalk2";
+import counseltalkhana from "./src/screens/counseltalkhana";
+import counseltalkhana2 from "./src/screens/counseltalkhana2";
+import counseltalkhana3 from "./src/screens/counseltalkhana3";
+import counseltalkhana4 from "./src/screens/counseltalkhana4";
+import counseltalkhana5 from "./src/screens/counseltalkhana5";
+import counseltalkhana6 from "./src/screens/counseltalkhana6";
+import counseltalkhana7 from "./src/screens/counseltalkhana7";
+import counseltalkhana8 from "./src/screens/counseltalkhana8";
+import counseltalkhana9 from "./src/screens/counseltalkhana9";
+import counseltalkhana10 from "./src/screens/counseltalkhana10";
+import counseltalkhana11 from "./src/screens/counseltalkhana11";
+import counseltalkhana12 from "./src/screens/counseltalkhana12";
+import counseltalkhana13 from "./src/screens/counseltalkhana13";
+import counseltalkhana14 from "./src/screens/counseltalkhana14";
+import counseltalkhana15 from "./src/screens/counseltalkhana15";
+
+import counseltalkdul from "./src/screens/counseltalkdul";
+import counseltalkset from "./src/screens/counseltalkset";
+import counseltalknet from "./src/screens/counseltalknet";
+import counseltalkdaseot from "./src/screens/counseltalkdaseot";
+import counseltalkyeoseot from "./src/screens/counseltalkyeoseot";
 
 
 import counselnormal from "./src/screens/counselnormal";
@@ -150,6 +172,28 @@ const counselFlow = createStackNavigator(
     counselenter : counselenter,
     counselwrite : counselwrite,
     counseltalk : counseltalk,
+    counseltalk2 : counseltalk2,
+    counseltalkhana : counseltalkhana,
+    counseltalkhana2 : counseltalkhana2,
+    counseltalkhana3 : counseltalkhana3,
+    counseltalkhana4 : counseltalkhana4,
+    counseltalkhana5 : counseltalkhana5,
+    counseltalkhana6 : counseltalkhana6,
+    counseltalkhana7 : counseltalkhana7,
+    counseltalkhana8 : counseltalkhana8,
+    counseltalkhana9 : counseltalkhana9,
+    counseltalkhana10 : counseltalkhana10,
+    counseltalkhana11 : counseltalkhana11,
+    counseltalkhana12 : counseltalkhana12,
+    counseltalkhana13 : counseltalkhana13,
+    counseltalkhana14 : counseltalkhana14,
+    counseltalkhana15 : counseltalkhana15,
+
+    counseltalkdul : counseltalkdul,
+    counseltalkset : counseltalkset,
+    counseltalknet : counseltalknet,
+    counseltalkdaseot : counseltalkdaseot,
+    counseltalkyeoseot : counseltalkyeoseot,
 
     counselinfo : counselinfo,
     counselinfo2 : counselinfo2,
