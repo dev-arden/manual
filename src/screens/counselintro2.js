@@ -7,7 +7,6 @@ import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
 import Imagelist from '../components/Imagelist';
-import Exlist from '../components/Exlist';
 
 /**
  * 
@@ -15,29 +14,26 @@ import Exlist from '../components/Exlist';
    [상담자 신분증과 등록기관 지정서 제시
  */
 
-const counselid = ({navigation}) => {
+const counselintro2 = ({navigation}) => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="신분증 확인"
+        title="사전연명의료의향서 소개"
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
           imageSource={require('../../assets/info.png')}
         />
         <Textlist 
-          text="작성을 원하신다면, 본인 확인을 위해 신분증 제시를 부탁드립니다."
+          text="사전연명의료의향서는 19세 이상의 사람이 미래에 연명의료의 대상이 될 경우를 대비하여 자신의 연명의료에 대한 의사를 미리, 직접 문서로 밝혀두는 것인데요."
         />
         <Textlist 
-          text="(장애인 등록증은 주민번호 기재여부, 여권 및 외국인 등록증 유효기간 확인)"
+          text="의향서는 건강할 때는 효력이 없지만 향후 임종과정에 있는 환자가 되었을때, 담당의사가 미리 작성된 의향서를 통해 환자의 뜻에 변함이 없는지 확인해서 환자의 연명의료결정을 실제로 이행할 수 있게 됩니다."
         />
-        {/* <Exlist 
-          text = "(장애인 등록증은 주민번호 기재여부, 여권 및 외국인 등록증 유효기간 확인)"
-        /> */}
       </ScrollView>
       <Buttonlist 
-        title="다음"
-        routename="counselid2"
+        title="완료"
+        routename="manual1"
       />
     </SafeAreaView>
   );
@@ -62,4 +58,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default counselid;
+export default counselintro2;

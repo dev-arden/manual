@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, FlatList} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { ScrollView } from 'react-native-gesture-handler';
 import TitlewithoutImage from "../components/TitlewithoutImage";
@@ -7,65 +7,60 @@ import Titlelist from '../components/Titlelist';
 import Checkicon from '../components/Checkicon';
 import Shorttext from "../components/Shoretext";
 import Buttonlist from "../components/Buttonlist";
+import { SafeAreaView } from 'react-native';
+import CheckText from '../components/CheckText';
 
 const counselready2 = ({navigation}) => {
+  const type = [
+    {
+      id: '1',
+      text : '법정서식 또는 PC 또는 태블릿 PC'
+    },
+    {
+      id: '2',
+      text : '의향서 설명 시 참고자료 또는 동영상'
+    },
+    {
+      id : '3',
+      text : '상담자의 신원 확인을 위한 등록기관 지정서와 상담자 신분 증명 등 신빙성 있는 근거 자료 '
+    }
+  ];
+
   return (
-    <ScrollView>
-      <View style = {styles.viewstyle}>
-        <TitlewithoutImage
-          title="2 - 사전연명의료의향서 서식 준비"
-        />
-        <View style={styles.liststyle}>
-          <Checkicon />
-          <Shorttext 
-            text="문서 혹은 태블릿 PC(공동인증서)"
-          />
-        </View>
-
-        <TitlewithoutImage 
-          title="3 - 상담자용 물품"
-        />
-        <View style={styles.liststyle}>
-            <Checkicon />
-            <Shorttext 
-              text="직원증(상담증)"
+    // <View style={styles.viewstyle}>
+    //   <TitlewithoutImage 
+    //     title="준비사항"
+    //   />
+    //   <CheckText 
+    //     text = "법정서식 또는 PC 또는 태블릿 PC"
+    //   />
+    //   <CheckText 
+    //     text = "의향서 설명 시 참고자료 또는 동영상"
+    //   />
+    //   <CheckText 
+    //     text = "상담자의 신원 확인을 위한 등록기관 지정서와 상담자 신분 증명 등 신빙성 있는 근거 자료"
+    //   />
+    // </View>
+    <SafeAreaView style={{flex:1}}>
+      <TitlewithoutImage 
+        title="준비사항"
+      />
+      <FlatList 
+        keyExtractor = {(item)=> item.id}
+        data = {type}
+        renderItem={({item}) => 
+          //<TouchableOpacity onPress={() => navigation.navigate('counsel'+`${item.nav}`)}>
+            <CheckText 
+              text={item.text}
             />
-        </View>
-
-        <View style={styles.liststyle}>
-          <Checkicon />
-          <Shorttext 
-            text="등록기관 지정서"
-          />
-        </View>
-
-        <View style={styles.liststyle}>
-          <Checkicon />
-          <Shorttext 
-            text="상담매뉴얼"
-          />
-        </View>
-
-        <View style={styles.liststyle}>
-          <Checkicon />
-          <Shorttext 
-            text="상담일지와 상담그림카드"
-          />
-        </View>
-
-        <View style={styles.liststyle}>
-          <Checkicon />
-          <Shorttext 
-            text="필기류"
-          />
-        </View>
-        
-        <Buttonlist 
-          title="다음"
-          routename="counselready3"
-        />
-      </View>
-    </ScrollView>
+          //</TouchableOpacity>
+        }
+      />
+      <Buttonlist 
+        title = "다음"
+        routename = "counselready3"
+      />
+    </SafeAreaView>
   );
 };
 

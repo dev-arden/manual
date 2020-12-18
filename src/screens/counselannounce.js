@@ -8,30 +8,30 @@ import TitlewithoutImage from '../components/TitlewithoutImage';
 import Imagelist from "../components/Imagelist";
 
 /**
- 사전연명의료의향서 등록증을 무료로 발급받을 수 있습니다. 
-발급신청을 하시겠습니까? 
+사전연명의료의향서 작성이 완료되었습니다. 
+작성해주신 사전연명의료의향서가 국립연명의료관리기관 시스템에 등록이 완료되면 작성자님의 휴대폰으로 “OOO님의 사전연명의료의향서가 시스템(www.lst.go.kr)에 등록 되었습니다.” 라고 문자가 발송됩니다. 
  */
 
-const counselenter = () => {
+const counselannounce = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="등록증 신청 설명"
+        title="사전연명의료의향서 등록 설명"
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
           imageSource={require('../../assets/info.png')}
         />
         <Textlist 
-          text="사전연명의료의향서 등록증을 무료로 발급받을 수 있습니다."
+          text="사전연명의료의향서 작성이 완료되었습니다."
         />
         <Textlist 
-          text="발급신청을 하시겠습니까?"
+          text="작성해주신 사전연명의료의향서가 국립연명의료관리기관 시스템에 등록이 완료되면 작성자님의 휴대폰으로 “OOO님의 사전연명의료의향서가 시스템(www.lst.go.kr)에 등록 되었습니다.” 라고 문자가 발송됩니다."
         />
       </ScrollView> 
       <Buttonlist
-        title = "다음"
-        routename = "counselenter2"
+        title = "완료"
+        routename = "manual1"
       />
     </SafeAreaView>
   );
@@ -58,4 +58,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default counselenter;
+export default counselannounce;

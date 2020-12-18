@@ -16,18 +16,18 @@ const counselid5 = ({navigation}) => {
     <ScrollView>
       <View style = {styles.viewstyle}>
         <Titlelist 
-          title="[간편인지검사]"
+          title="간편인지검사"
           imageSource={require('../../assets/test.png')} 
         />
         <Textlist 
-          text="다음은 간편하게 OOO님의 판단력을 알아보겠습니다."
+          text="이 질문은 사전연명의료의향서는 직접 작성하기 위해 필요한 의사결정능력을 판단하기 위한 간단한 질문입니다."
         />
         <Textlist 
-          text="다음의 질문에 대답해주세요."
+          text="(위 질문 물음)"
         />
         <Buttonlist 
-          title="다음"
-          routename="counselid6"
+          title="완료"
+          routename="manual1"
         />
       </View>
     </ScrollView>

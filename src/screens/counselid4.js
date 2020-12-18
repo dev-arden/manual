@@ -1,9 +1,11 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import Titlelist from '../components/Titlelist';
-import Buttonlist from '../components/Buttonlist';
 import Textlist from '../components/Textlist';
+import Buttonlist from '../components/Buttonlist';
+import { SafeAreaView } from 'react-native';
+import TitlewithoutImage from '../components/TitlewithoutImage';
+import Imagelist from '../components/Imagelist';
 
 /**
  * 
@@ -13,24 +15,32 @@ import Textlist from '../components/Textlist';
 
 const counselid4 = ({navigation}) => {
   return (
-    <ScrollView>
-      <View style = {styles.viewstyle}>
-        <Titlelist 
-          title="[맞춤상담방법 판단 알고리즘]"
+    <SafeAreaView style={{flex:1}}>
+      <TitlewithoutImage 
+        title="의사능력결정 판단 알고리즘 적용"
+      />
+      <ScrollView style={{flex:2}}>
+        <Imagelist 
           imageSource={require('../../assets/algo1.png')}
         />
         <Textlist 
-          text="저희는 OOO님께서 편안하게 상담받으시도록 다양한 방법으로 맞춤형 상담을 드리고 있습니다."
+          text="OOO님께서 OOOOOOOOOOOOOOOOOOOOOOO 점이 불편하다고 하셨는데요. 저희가 간단한 질문을 통해서 OOO님께 맞춤형 상담을 진행하려고 합니다."
         />
         <Textlist 
-          text="앞이 잘 안보이시거나, 소리가 잘 안들리시거나, 글을 잘 읽으실 수 없거나 무엇이든지 불편한 점이 있으시면 알려주시기 바랍니다."
+          text="괜찮으신가요?"
         />
-        <Buttonlist 
-          title="다음"
-          routename="counselid5"
+        <Textlist 
+          text="(동의한 경우 계속 진행)"
         />
-      </View>
-    </ScrollView>
+        {/* <Exlist 
+          text = "(장애인 등록증은 주민번호 기재여부, 여권 및 외국인 등록증 유효기간 확인)"
+        /> */}
+      </ScrollView>
+      <Buttonlist 
+        title="다음"
+        routename="counselid5"
+      />
+    </SafeAreaView>
   );
 };
 

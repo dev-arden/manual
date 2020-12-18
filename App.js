@@ -44,9 +44,24 @@ import counselmean7 from "./src/screens/counselmean7";
 
 import counselfinish from "./src/screens/counselfinish";
 import counselenter from "./src/screens/counselenter";
+import counselenter2 from "./src/screens/counselenter2";
+
+import counselannounce from "./src/screens/counselannounce";
+
 import counselwrite from "./src/screens/counselwrite";
+import counselwrite2 from "./src/screens/counselwrite2";
+import counselwrite3 from "./src/screens/counselwrite3";
+
+
 import counseltalk from "./src/screens/counseltalk";
 import counseltalk2 from "./src/screens/counseltalk2";
+import counseltalk3 from "./src/screens/counseltalk3";
+import counseltalk4 from "./src/screens/counseltalk4";
+import counseltalk5 from "./src/screens/counseltalk5";
+import counseltalk6 from "./src/screens/counseltalk6";
+import counseltalk7 from "./src/screens/counseltalk7";
+
+
 import counseltalkhana from "./src/screens/counseltalkhana";
 import counseltalkhana2 from "./src/screens/counseltalkhana2";
 import counseltalkhana3 from "./src/screens/counseltalkhana3";
@@ -64,16 +79,41 @@ import counseltalkhana14 from "./src/screens/counseltalkhana14";
 import counseltalkhana15 from "./src/screens/counseltalkhana15";
 
 import counseltalkdul from "./src/screens/counseltalkdul";
+import counseltalkdul2 from "./src/screens/counseltalkdul2";
+import counseltalkdul3 from "./src/screens/counseltalkdul3";
+
 import counseltalkset from "./src/screens/counseltalkset";
+import counseltalkset2 from "./src/screens/counseltalkset2";
+import counseltalkset3 from "./src/screens/counseltalkset3";
+
+
 import counseltalknet from "./src/screens/counseltalknet";
+import counseltalknet2 from "./src/screens/counseltalknet2";
+import counseltalknet3 from "./src/screens/counseltalknet3";
+
+
 import counseltalkdaseot from "./src/screens/counseltalkdaseot";
+import counseltalkdaseot2 from "./src/screens/counseltalkdaseot2";
+import counseltalkdaseot3 from "./src/screens/counseltalkdaseot3";
+
+
 import counseltalkyeoseot from "./src/screens/counseltalkyeoseot";
+import counseltalkyeoseot2 from "./src/screens/counseltalkyeoseot2";
+import counseltalkyeoseot3 from "./src/screens/counseltalkyeoseot3";
 
 
 import counselnormal from "./src/screens/counselnormal";
 import counselready from "./src/screens/counselready";
 import counselready2 from "./src/screens/counselready2";
 import counselready3 from "./src/screens/counselready3";
+import counselready4 from "./src/screens/counselready4";
+
+import counselintro from "./src/screens/counselintro";
+import counselintro2 from "./src/screens/counselintro2";
+
+import counselcheck from "./src/screens/counselcheck";
+import counselcheck2 from "./src/screens/counselcheck2";
+import counselcheck3 from "./src/screens/counselcheck3";
 
 import counseltype from "./src/screens/counseltype"; 
 // import counselalgo from "./src/screens/counselalgo";
@@ -170,9 +210,22 @@ const counselFlow = createStackNavigator(
     counselmean7 : counselmean7,
     counselfinish : counselfinish,
     counselenter : counselenter,
+    counselenter2 : counselenter2,
+
+    counselannounce : counselannounce,
+
     counselwrite : counselwrite,
+    counselwrite2 : counselwrite2,
+    counselwrite3 : counselwrite3,
+
     counseltalk : counseltalk,
     counseltalk2 : counseltalk2,
+    counseltalk3 : counseltalk3,
+    counseltalk4 : counseltalk4,
+    counseltalk5 : counseltalk5,
+    counseltalk6 : counseltalk6,
+    counseltalk7 : counseltalk7,
+
     counseltalkhana : counseltalkhana,
     counseltalkhana2 : counseltalkhana2,
     counseltalkhana3 : counseltalkhana3,
@@ -190,10 +243,28 @@ const counselFlow = createStackNavigator(
     counseltalkhana15 : counseltalkhana15,
 
     counseltalkdul : counseltalkdul,
+    counseltalkdul2 : counseltalkdul2,
+    counseltalkdul3 : counseltalkdul3,
+
+
     counseltalkset : counseltalkset,
+    counseltalkset2 : counseltalkset2,
+    counseltalkset3 : counseltalkset3,
+    
+    
     counseltalknet : counseltalknet,
+    counseltalknet2 : counseltalknet2,
+    counseltalknet3 : counseltalknet3,
+    
+    
     counseltalkdaseot : counseltalkdaseot,
+    counseltalkdaseot2 : counseltalkdaseot2,
+    counseltalkdaseot3 : counseltalkdaseot3,
+    
+    
     counseltalkyeoseot : counseltalkyeoseot,
+    counseltalkyeoseot2 : counseltalkyeoseot2,
+    counseltalkyeoseot3 : counseltalkyeoseot3,
 
     counselinfo : counselinfo,
     counselinfo2 : counselinfo2,
@@ -201,6 +272,7 @@ const counselFlow = createStackNavigator(
     counselready : counselready,
     counselready2 : counselready2,
     counselready3 : counselready3,
+    counselready4 : counselready4,
     // counselalgo : counselalgo,
     // counselalgoyes : counselalgoyes,
     // counselalgono : counselalgono,
@@ -217,6 +289,12 @@ const counselFlow = createStackNavigator(
     manual6 : manual6,
     manual7 : manual7,
     //manual8 : manual8
+    counselintro : counselintro,
+    counselintro2 : counselintro2,
+
+    counselcheck : counselcheck,
+    counselcheck2 : counselcheck2,
+    counselcheck3 : counselcheck3
   },
   // {
   //   defaultNavigationOptions: {

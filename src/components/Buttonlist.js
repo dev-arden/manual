@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   button:{
     alignSelf: 'stretch',
     marginHorizontal : 20,
-    marginBottom : 15,
+    marginVertical : 15,
     borderWidth : 2,
   }
 });

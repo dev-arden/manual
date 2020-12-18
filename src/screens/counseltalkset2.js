@@ -7,26 +7,28 @@ import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
 import Imagelist from "../components/Imagelist";
 
-const counseltalkdul = () => {
+/**
+ * 
+ * 의향서가 작성되어 등록된 후에 연명의료계획서가 다시 작성된 경우에는 연명의료계획서 작성 이후부터 의향서가 효력을 잃게 됩니다. 
+ */
+
+const counseltalkset2 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="호스피스 의향"
+        title="사전연명의료의향서의 효력"
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
           imageSource={require('../../assets/maintain.png')}
         />
         <Textlist 
-          text="사전연명의료의향서 작성 시 호스피스 이용 의향을 선택할 수 있습니다."
-        />
-        <Textlist 
-          text="호스피스란  호스피스 대상 환자와 그 가족에게 통증과 증상의 완화 등을 포함한 신체적, 심리사회적, 영적 영역에 대한 종합적인 평가와 치료를 목적으로 하는 의료로 입원형, 자문형, 가정형 호스피스가 있습니다."
+          text="의향서가 작성되어 등록된 후에 연명의료계획서가 다시 작성된 경우에는 연명의료계획서 작성 이후부터 의향서가 효력을 잃게 됩니다."
         />
       </ScrollView> 
       <Buttonlist
         title = "다음"
-        routename = "counseltalkdul2"
+        routename = "counseltalkset3"
       />
     </SafeAreaView>
   );
@@ -39,4 +41,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default counseltalkdul;
+export default counseltalkset2;

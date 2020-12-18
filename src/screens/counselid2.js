@@ -1,9 +1,11 @@
 import React from 'react';
-import {View, StyleSheet, Image} from 'react-native';
+import {StyleSheet} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import Titlelist from '../components/Titlelist';
 import Textlist from '../components/Textlist';
 import Buttonlist from '../components/Buttonlist';
+import { SafeAreaView } from 'react-native';
+import TitlewithoutImage from '../components/TitlewithoutImage';
+import Imagelist from '../components/Imagelist';
 
 /**
  * 
@@ -13,21 +15,29 @@ import Buttonlist from '../components/Buttonlist';
 
 const counselid2 = ({navigation}) => {
   return (
-    <ScrollView>
-      <View style = {styles.viewstyle}>
-        <Titlelist 
-          title="[신분증]"
-          imageSource={require('../../assets/id2.png')}
+    <SafeAreaView style={{flex:1}}>
+      <TitlewithoutImage 
+        title="작성자의 의사결정능력 확인"
+      />
+      <ScrollView style={{flex:2}}>
+        <Imagelist 
+          imageSource={require('../../assets/info.png')}
         />
         <Textlist 
-          text="사전연명의료의향서는 다른 사람이 대신 작성할 수 없고, 19세 이상의 성인만이 작성할 수 있습니다."
+          text="저희 등록기관은 OOO님께 사전연명의료의향서 작성 시 도움이 필요한 지 여부를 판단하기 위해 몇 가지 질문을 드립니다."
         />
-        <Buttonlist 
-          title="다음"
-          routename="counselid3"
+        <Textlist 
+          text="간단한 질문이므로 듣고 대답해주시길 부탁 드립니다."
         />
-      </View>
-    </ScrollView>
+        {/* <Exlist 
+          text = "(장애인 등록증은 주민번호 기재여부, 여권 및 외국인 등록증 유효기간 확인)"
+        /> */}
+      </ScrollView>
+      <Buttonlist 
+        title="다음"
+        routename="counselid3"
+      />
+    </SafeAreaView>
   );
 };
 
@@ -35,6 +45,18 @@ const styles = StyleSheet.create({
   viewstyle:{
     flex:1,
     justifyContent : 'center'
+  },
+  liststyle: {
+    marginHorizontal : 20,
+    marginVertical : 15,
+    fontSize : 20,
+    borderWidth : 1,
+    borderColor : 'white',
+    color : 'white',
+    backgroundColor : 'white',
+    paddingVertical: 30,
+    paddingHorizontal : 20,
+    flexDirection : 'row'
   }
 });
 

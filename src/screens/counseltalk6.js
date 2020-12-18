@@ -7,36 +7,36 @@ import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
 import Imagelist from "../components/Imagelist";
 
-const counseltalkdul = () => {
+const counseltalk6 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="호스피스 의향"
+        title="사전연명의료의향서 내용설명"
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/maintain.png')}
+          imageSource={require('../../assets/info.png')}
         />
         <Textlist 
-          text="사전연명의료의향서 작성 시 호스피스 이용 의향을 선택할 수 있습니다."
+          text="지금부터 작성자께서 사전연명의료의향서를 작성하는데 반드시 이해하셔야 하는 부분을 설명해드리겠습니다."
         />
         <Textlist 
-          text="호스피스란  호스피스 대상 환자와 그 가족에게 통증과 증상의 완화 등을 포함한 신체적, 심리사회적, 영적 영역에 대한 종합적인 평가와 치료를 목적으로 하는 의료로 입원형, 자문형, 가정형 호스피스가 있습니다."
+          text="만약 설명하는 내용 중 이해가 되지 않는 내용이 있으면 말씀해주세요. 다시 천천히 설명 드리겠습니다."
         />
       </ScrollView> 
       <Buttonlist
         title = "다음"
-        routename = "counseltalkdul2"
+        routename = "counseltalk7"
       />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  viewstyle : {
+  viewstyle:{
     flex:1,
     justifyContent : 'center'
-  }
+  },
 });
 
-export default counseltalkdul;
+export default counseltalk6;

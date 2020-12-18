@@ -1,28 +1,32 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import Buttonlist from '../components/Buttonlist';
 import Textlist from '../components/Textlist';
-import Titlelist from '../components/Titlelist';
+import Buttonlist from '../components/Buttonlist';
+import { SafeAreaView } from 'react-native';
+import TitlewithoutImage from '../components/TitlewithoutImage';
+import Imagelist from "../components/Imagelist";
 
 const counseltalkhana = () => {
-  return(
-    <ScrollView>
-      <View style={styles.viewstyle}> 
-        <Titlelist 
-          title="설명사항"
-          imageSource={require('../../assets/hana1.png')}
+  return (
+    <SafeAreaView style={{flex:1}}>
+      <TitlewithoutImage 
+        title="연명의료 시술의 종류"
+      />
+      <ScrollView style={{flex:2}}>
+        <Imagelist 
+          imageSource={require('../../assets/info.png')}
         />
         <Textlist 
-          text="연명의료의 시행 방법 및 연명의료 중단 등 결정에 관한 사항에 대해 상담그림카드로 설명드리겠습니다."
+          text="임종과정에 있는 환자가 되었을  때 받을 수 있는 임종기간을 연장하는 연명의료에 대해서 그림카드로 설명을 드리겠습니다."
         />
-        <Buttonlist 
-          title="다음"
-          routename="counseltalkhana2"
-        />
-      </View>
-    </ScrollView>      
-  )
+      </ScrollView> 
+      <Buttonlist
+        title = "다음"
+        routename = "counseltalkhana2"
+      />
+    </SafeAreaView>
+  );
 };
 
 const styles = StyleSheet.create({

@@ -1,28 +1,38 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import Textlist from '../components/Textlist';
-import Titlelist from '../components/Titlelist';
-import Buttonlist from '../components/Buttonlist';
+import {StyleSheet} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import Textlist from '../components/Textlist';
+import Buttonlist from '../components/Buttonlist';
+import { SafeAreaView } from 'react-native';
+import TitlewithoutImage from '../components/TitlewithoutImage';
+import Imagelist from "../components/Imagelist";
 
 const counseltalkhana4 = () => {
-  return(
-    <ScrollView>
-      <View style={styles.viewstyle}> 
-        <Titlelist 
-          title="설명사항"
-          imageSource={require('../../assets/hana4.png')}
+  return (
+    <SafeAreaView style={{flex:1}}>
+      <TitlewithoutImage 
+        title="3.항암제 투여"
+      />
+      <ScrollView style={{flex:2}}>
+        <Imagelist 
+          imageSource={require('../../assets/blood.png')}
         />
         <Textlist 
-          text="체외생명유지술은 모든 혈액을 몸 밖으로 빼내어 에크모라는 기계로 통과시켜 산소를 공급하고 다시 몸으로 넣는 방법입니다."
+          text="일반 암환자에게는 암을 축소, 억제 제거하기 위해 항암제를 투여하는데요."
         />
-        <Buttonlist 
-          title="다음"
-          routename="counseltalkhana5"
+        <Textlist 
+          text="그러나 임종과정에 있는 환자에게 항암제 투여는 담당의사와 함께 신중하게 결정해야 합니다."
         />
-      </View>    
-    </ScrollView>
-  )
+        <Textlist 
+          text="환자에게 득이 되기는커녕 항암치료를 견디지 못하고 생이 더 단축될 수도 있습니다."
+        />
+      </ScrollView> 
+      <Buttonlist
+        title = "다음"
+        routename = "counseltalkhana5"
+      />
+    </SafeAreaView>
+  );
 };
 
 const styles = StyleSheet.create({

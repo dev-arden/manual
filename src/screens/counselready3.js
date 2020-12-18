@@ -5,56 +5,24 @@ import { ScrollView } from 'react-native-gesture-handler';
 import Textlist from '../components/Textlist';
 import TitlewithoutImage from "../components/TitlewithoutImage";
 import Buttonlist from "../components/Buttonlist";
+import { SafeAreaView } from 'react-native';
 
 const counselready3 = ({navigation}) => {
   return (
-    <ScrollView>
-      <View style = {styles.viewstyle}>
+    <SafeAreaView style={{flex:1}}>      
         <TitlewithoutImage
-          title="상담 전 다짐"
+          title="1:1 상담실 이동"
         />
-        <Textlist
-          text="나는 내담자가 사전연명의료의향서를 충분히 이해하고 자발적으로 의사결정할 수 있도록 내담자의 특성을 반영한 맞춤형 상담을 제공할 것이다."
-        />
-        {/* <View style={styles.liststyle}>
-          <View style={{flexDirection : 'column'}}>
+        <ScrollView style={{flex:2}}>
             <Textlist
-              text="나는 내담자가 사전연명의료의향서를 충분히 이해하고 자발적으로 의사결정할 수 있도록 내담자의 특성을 반영한 맞춤형 상담을 제공할 것이다."
+              text="사전연명의료의향서 작성을 원하는 방문자를 기밀성 보장을 위해 작성자를 독립성이 보장된 ‘1:1 상담실’로 안내합니다."
             />
-          </View>
-        </View>
-        <View style={styles.liststyle}>
-          <View style={{alignSelf:"center"}}>
-            <AntDesign name="check" size={25} color="blue"/>
-          </View>
-          <View style={{flexDirection : 'column'}}>
-            <Text style={styles.textstyle}>
-              나는 내담자가 
-            </Text>
-            <Text style={styles.textstyle}>
-              사전연명의료의향서를 
-            </Text>
-            <Text style={styles.textstyle}>
-              충분히 이해하고 자발적으로
-            </Text>
-            <Text style={styles.textstyle}>
-              의사결정할 수 있도록 
-            </Text>
-            <Text style={styles.textstyle}>
-              내담자의 특성을 반영한 
-            </Text>
-            <Text style={styles.textstyle}>
-              맞춤형 상담을 제공할 것이다.
-            </Text>
-          </View>
-        </View> */}
-
+        </ScrollView>
         <Buttonlist 
-          title="준비완료"
-          routename='manual1'
+          title="다음"
+          routename='counselready4'
         />
-      </View>
-    </ScrollView>
+    </SafeAreaView>
   );
 };
 

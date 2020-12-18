@@ -1,6 +1,7 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import Titlelist from '../components/Titlelist';
 import Textlist from '../components/Textlist';
 import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
@@ -13,29 +14,23 @@ import Imagelist from '../components/Imagelist';
    [상담자 신분증과 등록기관 지정서 제시
  */
 
-const counselid3 = ({navigation}) => {
+const counselcheck3 = ({navigation}) => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="의사능력결정 판단 알고리즘"
+        title="의향서 작성 의사 확인"
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/algo1.png')}
+          imageSource={require('../../assets/info.png')}
         />
         <Textlist 
-          text="저희 등록기관은 OOO님께 사전연명의료의향서 작성 시 도움이 필요한 지 여부를 판단하기 위해 몇 가지 질문을 드립니다."
+          text="사전연명의료의향서 작성을 원하는 경우는 작성자신분증을 통한 본인 확인"
         />
-        <Textlist 
-          text="간단한 질문이므로 듣고 대답해주시길 부탁 드립니다."
-        />
-        {/* <Exlist 
-          text = "(장애인 등록증은 주민번호 기재여부, 여권 및 외국인 등록증 유효기간 확인)"
-        /> */}
       </ScrollView>
       <Buttonlist 
-        title="다음"
-        routename="counselid4"
+        title="완료"
+        routename="manual1"
       />
     </SafeAreaView>
   );
@@ -45,7 +40,19 @@ const styles = StyleSheet.create({
   viewstyle:{
     flex:1,
     justifyContent : 'center'
+  },
+  liststyle: {
+    marginHorizontal : 20,
+    marginVertical : 15,
+    fontSize : 20,
+    borderWidth : 1,
+    borderColor : 'white',
+    color : 'white',
+    backgroundColor : 'white',
+    paddingVertical: 30,
+    paddingHorizontal : 20,
+    flexDirection : 'row'
   }
 });
 
-export default counselid3;
+export default counselcheck3;

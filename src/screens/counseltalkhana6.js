@@ -1,31 +1,41 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import Textlist from '../components/Textlist';
-import Titlelist from '../components/Titlelist';
-import Buttonlist from '../components/Buttonlist';
+import {StyleSheet} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import Textlist from '../components/Textlist';
+import Buttonlist from '../components/Buttonlist';
+import { SafeAreaView } from 'react-native';
+import TitlewithoutImage from '../components/TitlewithoutImage';
+import Imagelist from "../components/Imagelist";
 
 const counseltalkhana6 = () => {
-  return(
-    <ScrollView>
-      <View style={styles.viewstyle}> 
-        <Titlelist 
-          title="설명사항"
-          imageSource={require('../../assets/hana6.png')}
+  return (
+    <SafeAreaView style={{flex:1}}>
+      <TitlewithoutImage 
+        title="5.체외 생명 유지술"
+      />
+      <ScrollView style={{flex:2}}>
+        <Imagelist 
+          imageSource={require('../../assets/maintain.png')}
         />
         <Textlist 
-          text="이 밖에 항암제, 수혈, 혈관을 수축시키는 등 담당의사가 판단하여 치료효과없이 임종과정의 기간만을 연장하는 시술들이 있습니다."
+          text="체외생명유지술은 생명을 위협하는 호흡부전이나 순환기능 부전 상태에서 선택할 수 있는 심폐기능을 보조하기 위한 장치입니다."
         />
         <Textlist 
-          text="이러한 연명의료를 OOO님께서 만일 죽음에 임박하셨을 때 치료 효과 없이 임종과정의 기간만 연장하게 된다는 담당의사의 의학적 판단이 있는 경우 시행하지 않거나 중단하겠다는 의사를 미리 결정해 두는 것입니다."
+          text="정맥의 피를 뽑아 기계를 통해 산소를 보충하고 이산화탄소를 제거한 다음 정맥이나 동맥으로 주입하는 것을 지속하게 됩니다."
         />
-        <Buttonlist 
-          title="다음"
-          routename="counseltalkhana7"
+        <Textlist 
+          text="하지만 부작용으로 다리를 통하는 혈류를 차단하는 하지의 허혈로 인해 다리가 창백해지거나 파래지고 극심한 통증을 일으킵니다."
         />
-      </View>    
-    </ScrollView>
-  )
+        <Textlist 
+          text="또한 혈관 내 공기방울로 인해 기관으로 가는 혈액 공급이 차단되는 공기색전증이나 피떡이 형성되는 혈전색전증이 발생하여 피부가 붉어지고 붓고 통증을 느낄 수 있습니다."
+        />
+      </ScrollView> 
+      <Buttonlist
+        title = "다음"
+        routename = "counseltalkhana7"
+      />
+    </SafeAreaView>
+  );
 };
 
 const styles = StyleSheet.create({
