@@ -12,7 +12,7 @@ const HomeScreen = ({navigation}) => {
         <View style={styles.viewstyle}>
           <View>
             <Text style={styles.textstyle}>사전연명의료의향서</Text>
-            <Text style={styles.textstyle}>상담매뉴얼</Text>
+            <Text style={styles.textstyle}>맞춤상담매뉴얼</Text>
           </View>
           <View style={styles.buttonstyle}>
             <Button

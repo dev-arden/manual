@@ -21,7 +21,7 @@ const counseltalkset3 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/maintain.png')}
+          imageSource={require('../../assets/noname.png')}
         />
         <Textlist 
           text="의향서가 작성되었다 하더라도 본인이 직접 작성하지 않은 경우 , 본인의 자발적 의사에 따라 작성되지 않은 경우, 작성 전 등록기관이 설명해야 할 내용이 제공되지 않거나 작성자의 확인을 받지 않은 경우에는 의향서로서의 효력이 인정되지 않음을 설명하여야 합니다."

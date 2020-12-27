@@ -22,7 +22,7 @@ const counseltalknet3 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/maintain.png')}
+          imageSource={require('../../assets/noname.png')}
         />
         <Textlist 
           text="작성된 의향서는 국립연명의료관리기관 정보처리시스템으로 통보되어 영구적으로 관리됩니다."

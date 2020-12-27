@@ -6,27 +6,38 @@ import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
 import Imagelist from "../components/Imagelist";
+import NavLink from '../components/NavLink';
 
 const counseltalkdul2 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="호스피스 이용 결정(1)"
+        title="호스피스 이용 의향 여부"
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/maintain.png')}
+          imageSource={require('../../assets/talkdul2.png')}
         />
         <Textlist 
-          text="호스피스 대상 환자는 암, 후천성면역결핍증, 만성 폐쐐성 호흡기질환, 만성 간경화를 앓고 있는 자로서 담당의사 및 해당 분야 전문의 1명이 말기환자로 진단한 경우 또는 임종과정에 있는 환자로 판단을 받은 경우 입니다."
+          text="사전연명의료의향서에 호스피스 서비스 선택 및 이용에 대한 본인의 의향을 표시 할 수 있습니다."
         />
         <Textlist 
-          text="자세한 문의는 중앙호스피스센터 홈페이지(http//www.hospice.go.kr)나 국가암정보센터(1577-8899)로 문의하시면 됩니다."
+          text="작성자께서 호스피스 서비스를 이용할지에 대한 생각을 결정하지 못했다면 표시하지 않아도 됩니다."
+        />
+        <Textlist 
+          text="이용 의향이 있다고 체크하시면 자동으로 신청이 되는 것이 아니라, 나중에 실제 호스피스 대상 환자가 되셨을 때 별도의 호스피스 서비스 신청 절차를 거쳐야 이용 가능합니다."
+        />
+        <Textlist 
+          text="호스피스 이용 의향은 지금 결정하지 않더라도, 추후 호스피스 대상 환자가 되었을 때 신청을 하실 수 있습니다."
+        />
+        <NavLink 
+          text="추가 설명 확인하기"
+          routeName="counseltalkdul3"
         />
       </ScrollView> 
       <Buttonlist
         title = "다음"
-        routename = "counseltalkdul3"
+        routename = "counseltalkset1"
       />
     </SafeAreaView>
   );

@@ -7,6 +7,7 @@ import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
 import Imagelist from '../components/Imagelist';
+import ButtonFinish from '../components/ButtonFinish';
 
 /**
  * 
@@ -18,25 +19,31 @@ const counselcheck = ({navigation}) => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="의향서 작성 의사 확인"
+        title="사전연명의료의향서 작성 의사 확인"
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info.png')}
+          imageSource={require('../../assets/check.png')}
         />
         <Textlist 
-          text="사전연명의료의향서는  작성한 후에라도 언제든지 변경 및 철회 등이 가능합니다."
+          text="사전연명의료의향서는 작성한 후에라도 언제든지 변경·철회할 수 있습니다."
         />
         <Textlist 
-          text="의향서를 작성하시겠습니까?"
+          text="자신이 원하는 삶의 마무리에 대해 충분히 생각하신 후 결정하시고 경제적인 부담이나 강압에 의해서가 아닌, 작성자 본인의 자발적 의사로 작성하시기 바랍니다."
         />
         <Textlist 
-          text="자신이 원하는 삶의 마무리에 대해 충분히 생각하신 후 결정하고 경제적인 부담이나 강압에 의해서가 아닌, 작성자 본인의 자발적 의사로 작성하시기 바랍니다."
+          text="사전연명의료의향서를 작성하시겠습니까?"
+        />
+        <Textlist 
+          text="[사전연명의료의향서 작성을 원하지 않는 경우는 상담 종료]"
+        />
+        <Textlist 
+          text="[사전연명의료의향서 작성을 원하는 경우는 작성자신분증을 통한 본인 확인]"
         />
       </ScrollView>
-      <Buttonlist 
-        title="다음"
-        routename="counselcheck2"
+      <ButtonFinish 
+        routename="manual1"
+        routename2="counselid1"
       />
     </SafeAreaView>
   );

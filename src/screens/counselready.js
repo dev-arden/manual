@@ -1,11 +1,10 @@
-import React, { useState, useEffect }  from 'react';
-import {Text, View, StyleSheet, TouchableOpacity, FlatList} from 'react-native';
+import React from 'react';
+import {Text, View, StyleSheet, FlatList} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-//import AsyncStorage from '@react-native-async-storage/async-storage';
-import { ScrollView } from 'react-native-gesture-handler';
-//import titlebar from '../components/titlebar';
-import {Button} from 'react-native-elements'
+import TitlewithoutImage from "../components/TitlewithoutImage";
+import Buttonlist from "../components/Buttonlist";
+import { SafeAreaView } from 'react-native';
+import CheckText from '../components/CheckText';
 
 /**
  * 
@@ -19,190 +18,58 @@ import {Button} from 'react-native-elements'
 
 const counselready = ({navigation}) => {
   const type = [
-    // {
-    //   id: '1',
-    //   title : '상담실 환경 준비',
-    //   icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="orange"/>
-    // },
     {
       id: '1',
       title : '개인상담전용실(2~5평)',
-      icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="orange"/>
+      //icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="orange"/>
     },
     {
       id: '2',
       title: '테이블과 부드러운 등받이 의자(3~5개)',
-      icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="orange"/>
+      //icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="orange"/>
     },
     {
       id: '3',
-      title: '냉난방기와 온도점검',
-      icon : <MaterialCommunityIcons name="numeric-3-box" size={25} color="orange"/>
+      title: '냉난방기와 온도점검, 소음점검, 따뜻한 조명과 밝은 계열의 커튼과 벽지',
+      //icon : <MaterialCommunityIcons name="numeric-3-box" size={25} color="orange"/>
     },
     {
       id: '4',
-      title: '소음점검',
-      icon : <MaterialCommunityIcons name="numeric-4-box" size={25} color="orange"/>
+      title: '정리정돈과 청결유지',
+      //icon : <MaterialCommunityIcons name="numeric-6-box" size={25} color="orange"/>
     },
     {
       id: '5',
-      title: '따뜻한 조명과 밝은 계열의 커튼과 벽지',
-      icon : <MaterialCommunityIcons name="numeric-5-box" size={25} color="orange"/>
-    },
-    {
-      id: '6',
-      title: '정리정돈과 청결유지',
-      icon : <MaterialCommunityIcons name="numeric-6-box" size={25} color="orange"/>
-    },
-    {
-      id: '7',
-      title: '상담실 문 앞에 상담 중 표시',
-      icon : <MaterialCommunityIcons name="numeric-7-box" size={25} color="orange"/>
+      title: '상담실 문 앞에 <상담 중> 표시',
+      //icon : <MaterialCommunityIcons name="numeric-7-box" size={25} color="orange"/>
     }
   ];
 
-
   return (
-    <ScrollView>
-      {/* <View style={styles.viewstyle}>
-        <View style={styles.titleview}>
-          <Text style={styles.texttitle}>1. 상담실 환경</Text>
-        </View>
-        <View style={styles.textview}>
-          <Text style={styles.text}>개인 상담 전용실(2~5평)</Text>
-          <Text style={styles.text}>테이블과 부드러운 등받이 의자(3~5개)</Text>
-          <Text style={styles.text}>냉난방기와 온도점검</Text>
-          <Text style={styles.text}>소음 점검</Text>
-          <Text style={styles.text}>따뜻한 조명과 밝은 계열의 커튼과 벽지</Text>
-          <Text style={styles.text}>정리 정돈과 청결 유지</Text>
-          <Text style={styles.text}>문 앞에 상담 중 표시</Text>
-        </View>
-        <View style={styles.btboxview}>
-        </View>
-      </View> */}
-    
-    <View style = {styles.viewstyle}>
-      <View style = {styles.btboxview}>
-        <Text style={styles.titlestyle} >
-          1 - 상담실 환경 준비
-        </Text>
-      </View>
-      <View style={styles.liststyle}>
-        <View style={{alignSelf:"center"}}>
-          {/* {item.icon} */}
-          <AntDesign name="check" size={25} color="blue"/>
-        </View>
-        <Text style={{fontSize:18, color:'black', paddingHorizontal: 10, flex:1, alignSelf: 'center'}}>
-          개인상담전용실(2~5평)
-        </Text>
-      </View>
-
-      <View style={styles.liststyle}>
-        <View style={{alignSelf:"center"}}>
-          {/* {item.icon} */}
-          <AntDesign name="check" size={25} color="blue"/>
-        </View>
-        <Text style={{fontSize:18, color:'black', paddingHorizontal: 10, flex:1, alignSelf: 'center'}}>
-          테이블과 부드러운 등받이 의자(3~5개)
-        </Text>
-      </View>
-
-      <View style={styles.liststyle}>
-        <View style={{alignSelf:"center"}}>
-          {/* {item.icon} */}
-          <AntDesign name="check" size={25} color="blue"/>
-        </View>
-        <Text style={{fontSize:18, color:'black', paddingHorizontal: 10, flex:1, alignSelf: 'center'}}>
-          냉난방기와 온도점검
-        </Text>
-      </View>
-
-      <View style={styles.liststyle}>
-        <View style={{alignSelf:"center"}}>
-          {/* {item.icon} */}
-          <AntDesign name="check" size={25} color="blue"/>
-        </View>
-        <Text style={{fontSize:18, color:'black', paddingHorizontal: 10, flex:1, alignSelf: 'center'}}>
-          소음점검
-        </Text>
-      </View>
-
-      <View style={styles.liststyle}>
-        <View style={{alignSelf:"center"}}>
-          {/* {item.icon} */}
-          <AntDesign name="check" size={25} color="blue"/>
-        </View>
-        <Text style={{fontSize:18, color:'black', paddingHorizontal: 10, flex:1, alignSelf: 'center'}}>
-          따뜻한 조명과 밝은 계열의 커튼과 벽지
-        </Text>
-      </View>
-
-      <View style={styles.liststyle}>
-        <View style={{alignSelf:"center"}}>
-          {/* {item.icon} */}
-          <AntDesign name="check" size={25} color="blue"/>
-        </View>
-        <Text style={{fontSize:18, color:'black', paddingHorizontal: 10, flex:1, alignSelf: 'center'}}>
-          정리정돈과 청결유지
-        </Text>
-      </View>
-
-      <View style={styles.liststyle}>
-        <View style={{alignSelf:"center"}}>
-          <AntDesign name="check" size={25} color="blue"/>
-        </View>
-        <Text style={{fontSize:18, color:'black', paddingHorizontal: 10, flex:1, alignSelf: 'center'}}>
-          상담실 문 앞에 상담 중 표시
-        </Text>
-      </View>
-     
-        {/* <FlatList 
-          keyExtractor = {(item)=> item.id}
-          data = {type}
-          renderItem={({item}) => 
-              <View style={styles.liststyle}>
-                  <View style={{alignSelf:"center"}}>
-                    {/* {item.icon} 
-                    <AntDesign name="check" size={25} color="blue"/>
-                  </View>
-                  <Text style={{fontSize:18, color:'black', paddingHorizontal: 10, flex:1, alignSelf: 'center'}}>
-                    {item.title}
-                  </Text>
-              </View>
-          }
-        /> */}
-        
-        <View>
-          <Button 
-            icon={
-              <AntDesign
-                name="right"
-                size={15}
-                color="#4189D6"
-              />
-            }
-            iconRight
-            type="outline"
-            titleStyle = {{fontSize : 23, fontWeight : 'bold'}}
-            buttonStyle = {style=styles.buttonstyle}
-            title = "다음"
-            onPress = {() => navigation.navigate('counselready2')}
-          />
-        </View>
-      </View>
-    </ScrollView>
+    <SafeAreaView style={{flex:1}}>
+      <TitlewithoutImage 
+        title="상담실 환경"
+      />
+      <FlatList 
+        keyExtractor = {(item)=> item.id}
+        data = {type}
+        renderItem={({item}) => 
+          //<TouchableOpacity onPress={() => navigation.navigate('counsel'+`${item.nav}`)}>
+            <CheckText 
+              text={item.title}
+            />
+          //</TouchableOpacity>
+        }
+      />
+      <Buttonlist 
+        title = "다음"
+        routename = "counselready2"
+      />
+    </SafeAreaView>
   );
 };
 
-// counselready.navigationOptions = () => {
-//   return {
-//     headerRight: () => (
-//       <TouchableOpacity>
-//         <AntDesign name="staro" size={25}/>
-//       </TouchableOpacity>
-//     )
-//   };
-// };
+
 
 const styles = StyleSheet.create({
   titlestyle:{

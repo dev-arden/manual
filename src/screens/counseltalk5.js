@@ -15,13 +15,13 @@ const counseltalk5 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info.png')}
+          imageSource={require('../../assets/action.png')}
         />
         <Textlist 
-          text="사전연명의료의향서를 작성하면, 추후 의료기관에서 의사로부터 임종과정에 있는 환자로 판단되면, 본인 의사에 대한 확인 후 연명의료에 대한 중단등결정이 가능합니다."
+          text="사전연명의료의향서를 작성한 후, 추후 의료기관에서 의사 2인으로부터 임종과정에 있는 환자로 판단되면, 본인 의사를 확인 후 연명의료에 대한 중단 등 결정이 가능합니다."
         />
         <Textlist 
-          text="다만, 교통사고등 갑작스런 사고로 인한 응급상황이라면 응급의료에 관한 법률등에 따라 의료진이 치료를 진행합니다."
+          text="단, 교통사고 등 갑작스러운 사고로 인한 응급상황이라면 응급의료에 관한 법률 등에 따라 의료진이 치료를 진행합니다."
         />
       </ScrollView> 
       <Buttonlist

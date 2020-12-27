@@ -22,7 +22,7 @@ const counselcheck3 = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info.png')}
+          imageSource={require('../../assets/check.png')}
         />
         <Textlist 
           text="사전연명의료의향서 작성을 원하는 경우는 작성자신분증을 통한 본인 확인"

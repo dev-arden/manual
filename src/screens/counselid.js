@@ -8,6 +8,7 @@ import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
 import Imagelist from '../components/Imagelist';
 import Exlist from '../components/Exlist';
+import NavLink from '../components/NavLink';
 
 /**
  * 
@@ -23,17 +24,21 @@ const counselid = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info.png')}
+          imageSource={require('../../assets/id.png')}
         />
         <Textlist 
-          text="작성을 원하신다면, 본인 확인을 위해 신분증 제시를 부탁드립니다."
+          text="OOO님께서 사전연명의료의향서의 작성을 원하신다면, 본인 확인을 위해 신분증을 보여주시기 바랍니다."
         />
         <Textlist 
-          text="(장애인 등록증은 주민번호 기재여부, 여권 및 외국인 등록증 유효기간 확인)"
+          text="사전연명의료의향서는 다른 사람이 대신 작성할 수 없고, 19세 이상의 성인이 직접 작성할 수 있습니다."
         />
-        {/* <Exlist 
-          text = "(장애인 등록증은 주민번호 기재여부, 여권 및 외국인 등록증 유효기간 확인)"
-        /> */}
+        <Textlist 
+          text="(장애인 등록증은 주민등록번호 기재여부, 여권 및 외국인 등록증 유효기간 확인)"
+        />
+        <NavLink 
+          text="추가 설명 확인하기"
+          routeName="counselid4"
+        />
       </ScrollView>
       <Buttonlist 
         title="다음"

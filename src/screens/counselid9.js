@@ -1,7 +1,10 @@
 import React from 'react';
-import {Text, View, StyleSheet, Image} from 'react-native';
+import {View, StyleSheet, Image,Text} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import Textlist from '../components/Textlist';
 import Buttonlist from '../components/Buttonlist';
+import { SafeAreaView } from 'react-native';
+import TitlewithoutImage from '../components/TitlewithoutImage';
 
 /**
  * 
@@ -11,91 +14,42 @@ import Buttonlist from '../components/Buttonlist';
 
 const counselid9 = ({navigation}) => {
   return (
-    <ScrollView>
-      <View style = {styles.viewstyle}>
-        <View style = {styles.btboxview}>
-            <Text style={styles.titlestyle} >
-              [상담일지]
-            </Text>
-        </View>
-        <View style={styles.newliststyle}>
-          <Image 
-            source = {require('../../assets/note.png')} 
-            style ={{height : 400, width : 330, resizeMode:'contain'}}
-          />
-        </View>
-        <Buttonlist 
-          title="다음"
-          routename="counselid10"
+    <SafeAreaView style={{flex:1}}>
+      <TitlewithoutImage 
+        title="추가 설명"
+      />
+      <ScrollView style={{flex:2}}>
+        <Textlist 
+          text="사전연명의료의향서 작성의도 확인: 사전연명의료의향서 이유와 등록기관 방문 경로를 확인함으로 자발적 의사 여부를 확인하여 주치의, 복지관, 강의 등 어떤 이유로 작성하려는지 파악한다."
         />
-      </View>
-    </ScrollView>
+        <Textlist 
+          text="본인의 삶을 스스로 마무리한다는 측면에서 의향서 작성의 의미를 깊이 고민하고, 작성 여부를 결정하도록 안내한다."
+        />
+        <Textlist 
+          text="- 경제적인 문제나 자녀의 부양 부담 등이 주된 이유가 되지 않도록 숙고할 것을 권고한다."
+        />
+        <Textlist 
+          text="- 경제적인 문제나 자녀의 부양 부담에 대한 대화는 작성자의 고민을 초래할 수 있기 때문에 상담사가 이에 대한 내용을 먼저 얘기하지 않도록 주의가 필요하다."
+        />
+        <Textlist 
+          text="상담자는 중립적으로 의향서의 도입 취지와 그 효력 등 제도를 소개하고, 작성자 스스로 작성 여부를 정할 수 있도록 지원해야 한다."
+        />
+        <Textlist 
+          text="- 상담자의 역할은 충분한 설명을 통해 작성자가 의향서를 이해할 수 있도록 돕는 것이므로, 작성을 유도하거나 권유하지 않도록 주의해야 한다."
+        />
+      </ScrollView>
+      <Buttonlist 
+        title="확인"
+        routename="counseltalk"
+      />
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  titlestyle:{
-    fontSize:25,
-    fontWeight:'bold', 
-    color:'black',
-    // borderWidth: 1,
-    // borderColor : 'black',
-    alignSelf : 'center'
-  },
-  btboxview:{
-    flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
-    height : 60,
-    margin : 15,
-    borderRadius : 20,
-    //alignSelf: 'center',
-    justifyContent : 'center',
-    // borderWidth:2,
-    // borderColor: 'black'
-  },
   viewstyle:{
     flex:1,
     justifyContent : 'center'
-  },
-  liststyle: {
-    marginHorizontal : 20,
-    marginVertical : 15,
-    fontSize : 20,
-    borderWidth : 1,
-    borderColor : 'white',
-    color : 'white',
-    backgroundColor : 'white',
-    paddingVertical: 30,
-    paddingHorizontal : 20,
-    flexDirection : 'row'
-  },
-  newliststyle: {
-    marginHorizontal : 20,
-    marginVertical : 15,
-    fontSize : 20,
-    borderWidth : 1,
-    borderColor : 'white',
-    color : 'white',
-    backgroundColor : 'white',
-    paddingVertical: 10,
-    paddingHorizontal : 10,
-    flexDirection : 'row',
-    justifyContent:'space-around'
-  },
-  textstyle:{
-    fontSize:20,
-    color:'black',
-    paddingHorizontal: 10,
-    flex:1,
-    margin : 10
-    //alignSelf: 'center'
-  },
-  buttonstyle : {
-    alignSelf: 'stretch',
-    marginHorizontal : 20,
-    marginBottom : 15,
-    borderWidth : 2,
-    // borderColor : 'black'
   }
 });
 

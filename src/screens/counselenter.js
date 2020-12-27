@@ -20,7 +20,7 @@ const counselenter = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info.png')}
+          imageSource={require('../../assets/enter.png')}
         />
         <Textlist 
           text="사전연명의료의향서 등록증을 무료로 발급받을 수 있습니다."

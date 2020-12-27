@@ -9,37 +9,37 @@ const counseltalk7 = ({navigation}) => {
   const type = [
     {
       id : '1',
-      nav : 'hana',
+      nav : 'hana1',
       icon : <MaterialCommunityIcons name="numeric-1-circle-outline" size={25} color="black"/>,
       title: '연명의료의 시행 방법 및 연명의료 중단 등 결정에 관한 사항'
     },
     {
       id : '2',
-      nav : 'dul',
+      nav : 'dul1',
       icon : <MaterialCommunityIcons name="numeric-2-circle-outline" size={25} color="black"/>,
       title : '호스피스의 선택 및 이용에 관한 사항'
     },
     {
       id : '3',
-      nav : 'set',
+      nav : 'set1',
       icon : <MaterialCommunityIcons name="numeric-3-circle-outline" size={25} color="black"/>,
       title : '사전연명의료의향서의 효력 및 효력상실에 관한 사항'
     },
     {
       id : '4',
-      nav : 'net',
+      nav : 'net1',
       icon : <MaterialCommunityIcons name="numeric-4-circle-outline" size={25} color="black"/>,
       title : '사전연명의료의향서의 작성, 등록, 보관 및 통보에 관한 사항'
     },
     {
       id : '5',
-      nav : 'daseot',
+      nav : 'daseot1',
       icon : <MaterialCommunityIcons name="numeric-5-circle-outline" size={25} color="black"/>,
       title : '사전연명의료의향서의 변경, 철회 및 그에 따른 조치에 관한 사항'
     },
     {
       id : '6',
-      nav : 'yeoseot',
+      nav : 'yeoseot1',
       icon : <MaterialCommunityIcons name="numeric-6-circle-outline" size={25} color="black"/>,
       title: '사전연명의료의향서 등록기관이 폐업·휴업 하거나, 지정 취소되는 경우 기록의 이관에 관한 사항'
     },
@@ -69,10 +69,6 @@ const counseltalk7 = ({navigation}) => {
             </View>
           </TouchableOpacity>
         }
-      />
-      <Buttonlist 
-        title = "완료"
-        routename = "manual1"
       />
   </SafeAreaView>
   );

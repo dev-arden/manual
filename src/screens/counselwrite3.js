@@ -22,7 +22,7 @@ const counselwrite3 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/maintain.png')}
+          imageSource={require('../../assets/noname.png')}
         />
         <Textlist 
           text="이제 의향서를 등록하고자 합니다."

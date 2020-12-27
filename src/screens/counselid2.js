@@ -6,6 +6,7 @@ import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
 import Imagelist from '../components/Imagelist';
+import NavLink from '../components/NavLink';
 
 /**
  * 
@@ -17,21 +18,34 @@ const counselid2 = ({navigation}) => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="작성자의 의사결정능력 확인"
+        title="맞춤상담방법 판단 알고리즘"
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info.png')}
+          imageSource={require('../../assets/algo.png')}
         />
         <Textlist 
-          text="저희 등록기관은 OOO님께 사전연명의료의향서 작성 시 도움이 필요한 지 여부를 판단하기 위해 몇 가지 질문을 드립니다."
+          text="저희 등록기관은 OOO님께 사전연명의료의향서 작성 시 도움이 필요한 지 아닌지의 여부를 판단하기 위해 몇 가지 질문을 드립니다."
         />
         <Textlist 
-          text="간단한 질문이므로 듣고 대답해주시길 부탁 드립니다."
+          text="간단한 질문이므로 듣고 대답해주시길 부탁드립니다."
         />
-        {/* <Exlist 
-          text = "(장애인 등록증은 주민번호 기재여부, 여권 및 외국인 등록증 유효기간 확인)"
-        /> */}
+        <Textlist 
+          text="앞이 잘 안 보이시거나, 소리가 잘 안 들리시거나, 글을 잘 읽으실 수 없거나, 그 외 불편한 점이 있으시면 알려주시기 바랍니다."
+        />
+        <Textlist 
+          text="OOO님께서 ‘OOOOOOOO점이 불편하다’고 하셨는데요."
+        />
+        <Textlist 
+          text="저희가 간단한 질문을 통해서 OOO님을 위한 맞춤형 상담을 진행하려고 합니다."
+        />
+        <Textlist 
+          text="괜찮으신가요? (동의한 경우 계속 진행)"
+        />
+        <NavLink 
+          text="추가 설명 확인하기"
+          routeName="counselid6"
+        />
       </ScrollView>
       <Buttonlist 
         title="다음"

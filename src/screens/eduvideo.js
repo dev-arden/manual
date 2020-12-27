@@ -27,19 +27,24 @@ class eduvideo extends Component {
   // );
   render(){
     return (
-      <WebView 
-        ref={this.webViewRef}
-        allowsFullscreenVideo
-        useWebKit
-        onLoad={this.webViewLoaded}
-        allowsInlineMediaPlayback
-        mediaPlaybackRequiresUserAction
-        javaScriptEnabled
-        domStorageEnabled
-        scrollEnabled={false}
-        source={{uri:'https://www.youtube.com/embed/fgGg5D66t1w'}}
-        style={styles.videostyle}
-    />
+      <View style = {styles.viewstyle}>
+        <WebView 
+          ref={this.webViewRef}
+          allowsFullscreenVideo
+          useWebKit
+          onLoad={this.webViewLoaded}
+          allowsInlineMediaPlayback
+          mediaPlaybackRequiresUserAction
+          javaScriptEnabled
+          domStorageEnabled
+          scrollEnabled={false}
+          source={{uri:'https://www.youtube.com/embed/fgGg5D66t1w'}}
+          style={styles.videostyle}
+        />
+        <View style={{flex:2}}>
+          <Text>dd</Text>
+        </View>
+      </View>
     )
   }
 };
@@ -51,8 +56,7 @@ const styles = StyleSheet.create({
     borderColor: 'red'
   },
   videostyle:{
-    height: "50%",
-    marginTop: 20
+    flex : 1
   }
 });
 

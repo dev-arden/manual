@@ -15,7 +15,7 @@ const counseltalkhana7 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/maintain.png')}
+          imageSource={require('../../assets/talkhana7.png')}
         />
         <Textlist 
           text="중증 환자는 적절한 치료와 회복을 위해 적혈구 혈소판 등 다양한 혈액성분의 수혈이 필요할 수 있습니다."

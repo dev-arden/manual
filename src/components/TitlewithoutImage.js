@@ -26,11 +26,12 @@ const styles = StyleSheet.create({
   btboxview:{
     flexDirection : 'row',
     backgroundColor : '#FDF6E3',
-    height : 60,
+    height : 70,
     margin : 15,
     borderRadius : 20,
     //alignSelf: 'center',
     justifyContent : 'center',
+    padding : 5
     // borderWidth:2,
     // borderColor: 'black'
   }

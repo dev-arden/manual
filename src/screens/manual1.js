@@ -10,61 +10,61 @@ const manual1 = ({navigation}) => {
     {
       id: '1',
       title : '사전연명의료의향서 상담을 위한 준비',
-      nav : 'ready2',
+      nav : 'ready1',
       icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="orange"/>
     },
     {
       id: '2',
       title: '등록기관 및 상담자 소개',
-      nav : 'info',
+      nav : 'info1',
       icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="orange"/>
     },
     {
       id: '3',
       title: '사전연명의료의향서 소개',
-      nav : 'intro',
+      nav : 'intro1',
       icon : <MaterialCommunityIcons name="numeric-3-box" size={25} color="orange"/>
     },
     {
       id: '4',
       title: '사전연명의료의향서 작성 여부 확인',
-      nav : 'check',
+      nav : 'check1',
       icon : <MaterialCommunityIcons name="numeric-4-box" size={25} color="orange"/>
     },
     {
       id: '5',
       title: '작성자 본인 및 의사결정능력 확인',
-      nav : 'id',
+      nav : 'id1',
       icon : <MaterialCommunityIcons name="numeric-5-box" size={25} color="orange"/>
     },
     {
       id: '6',
       title: '사전연명의료의향서 작성을 위한 항목 설명',
-      nav : 'talk',
+      nav : 'talk1',
       icon : <MaterialCommunityIcons name="numeric-6-box" size={25} color="orange"/>
     },
     {
       id: '7',
       title: '사전연명의료의향서 작성',
-      nav : 'write',
+      nav : 'write1',
       icon : <MaterialCommunityIcons name="numeric-7-box" size={25} color="orange"/>
     },
     {
       id: '8',
       title: '등록증 발급 여부 확인',
-      nav : 'enter',
+      nav : 'enter1',
       icon : <MaterialCommunityIcons name="numeric-8-box" size={25} color="orange"/>
     },
     {
       id: '9',
       title: '작성된 사전연명의료의향서 등록 통보 안내',
-      nav : 'announce',
+      nav : 'announce1',
       icon : <MaterialCommunityIcons name="numeric-9-box" size={25} color="orange"/>
     }, 
     {
       id: '10',
       title: '사전연명의료의향서 작성 완료 안내',
-      nav : 'finish',
+      nav : 'finish1',
       icon : <MaterialCommunityIcons name="numeric-10-box" size={25} color="orange"/>
     }
   ];

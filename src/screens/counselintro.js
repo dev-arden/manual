@@ -22,13 +22,13 @@ const counselintro = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info.png')}
+          imageSource={require('../../assets/info3.png')}
         />
         <Textlist 
           text="먼저 연명의료결정제도와 사전연명의료의향서를 간단히 소개해드릴께요."
         />
         <Textlist 
-          text="연명의료결정제도는 임종과정에 있는 환자에게 무의미한 연명의료를 시행하지 않거나 중단할 수 있는 기준과 절차를 마련하여 삶을 존엄하게 마무리할 수 있도록 지원하기 위해 마련된 제도입니다."
+          text="연명의료결정제도는 더 이상의 치료방법이 없고 죽음에 임박하게 되는 임종과정에 있는 환자에게 생명만 유지하는 연명의료를 시행하지 않거나 중단할 수 있는 선택의 기회를 제공하여 남은 삶을 존엄하게 마무리할 수 있도록 지원하기 위해 마련된 제도입니다."
         />
       </ScrollView>
       <Buttonlist 

@@ -7,6 +7,8 @@ import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
 import Imagelist from '../components/Imagelist';
+import NavLink from "../components/NavLink";
+import ButtonFinish from '../components/ButtonFinish';
 
 /**
  * 
@@ -16,36 +18,31 @@ import Imagelist from '../components/Imagelist';
 
 const counselready4 = ({navigation}) => {
   return (
-    // <ScrollView>
-    //   <View style = {styles.viewstyle}>
-    //     <Titlelist 
-    //       title="[신분증]"
-    //       imageSource={require('../../assets/id2.png')}
-    //     />
-    //     <Textlist 
-    //       text="사전연명의료의향서는 다른 사람이 대신 작성할 수 없고, 19세 이상의 성인만이 작성할 수 있습니다."
-    //     />
-    //     <Buttonlist 
-    //       title="다음"
-    //       routename="counselid3"
-    //     />
-    //   </View>
-    // </ScrollView>
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
         title="동행자 분리 상담"
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/id2.png')}
+          imageSource={require('../../assets/noname.png')}
         />
         <Textlist 
-          text="사전연명의료의향서는 다른 사람이 대신 작성할 수 없고, 19세 이상의 성인만이 작성할 수 있습니다."
+          text="[동행자와 함께 방문한 경우]"
+        />
+        <Textlist 
+          text="사전연명의료의향서의 작성은 독립된 공간에서 1:1 상담을 통해 진행됩니다."
+        />
+        <Textlist 
+          text="혹시라도 발생할 수 있는 동행하신 분의 영향력을 차단하기 위해서니 상담실 밖에서 잠시 대기하여 주시기 바랍니다."
+        />
+        <NavLink 
+          routeName="counselready5"
+          text="추가 설명 확인하기"
         />
       </ScrollView>
-      <Buttonlist 
-        title="준비 완료"
+      <ButtonFinish 
         routename="manual1"
+        routename2="counselinfo1"
       />
     </SafeAreaView>
   );

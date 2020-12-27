@@ -22,7 +22,7 @@ const counselcheck2 = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info.png')}
+          imageSource={require('../../assets/check.png')}
         />
         <Textlist 
           text="사전연명의료의향서 작성을 원하지 않는 경우는 상담 종료 "

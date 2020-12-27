@@ -1,52 +1,48 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import Textlist from '../components/Textlist';
 import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
-import Imagelist from "../components/Imagelist";
+
 
 /**
- * 사전연명의료의향서 작성 후에 등록증 발급을 원하시면, 작성자께서 원하시는 주소지로 등록증을 2개월 이내 배송해드립니다. 
- * 등록증이 없어도 사전연명의료의향서 등록기관과 컴퓨터를 통해 언제든지 작성자님의 의향서를 조회하실 수 있습니다. 
- * 임종과정에 있는 환자가 되었을 때 의료기관윤리위원회 설치 의료기관에서 담당의사가 작성자님의 의향서를 조회할 수 잇습니다.
  * 
+ *  저는 보건복지부 지정을 받은 사전연명의료의향서 등록기관인 [기관명] 소속 상담사이며, 의향서 작성을 돕고 있습니다. 
+   [상담자 신분증과 등록기관 지정서 제시
  */
 
-const counseltalknet2 = () => {
+const counseltalkdul3 = ({navigation}) => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="작성, 등록, 보관, 통보"
+        title="추가 설명"
       />
       <ScrollView style={{flex:2}}>
-        <Imagelist 
-          imageSource={require('../../assets/maintain.png')}
+        <Textlist 
+          text="작성된 의향서는 등록기관에 등록되어 등록기관 폐업·휴업 또는 지정 취소 전까지 보관되고, 연명의료 정보처리시스템(intra.lst.go.kr)에 통보되어 영구적으로 관리됨을 설명한다."
         />
         <Textlist 
-          text="사전연명의료의향서 작성 후에 등록증 발급을 원하시면, 작성자께서 원하시는 주소지로 등록증을 2개월 이내 배송해드립니다."
+          text="작성된 의향서는 환자 본인 또는 작성자가 말기 또는 임종과정에 있을 경우 담당의사에 의해 조회될 수 있음을 설명한다."
         />
         <Textlist 
-          text="등록증이 없어도 사전연명의료의향서 등록기관과 컴퓨터를 통해 언제든지 작성자님의 의향서를 조회하실 수 있습니다."
+          text="작성자가 사망 전에 가족이 자신의 사전연명의료의향서를 열람하는 것을 원치 않을 경우 그 뜻을 미리 밝혀 놓을 수 있음을 안내한다."
         />
-        <Textlist 
-          text="임종과정에 있는 환자가 되었을 때 의료기관윤리위원회 설치 의료기관에서 담당의사가 작성자님의 의향서를 조회할 수 잇습니다."
-        />
-      </ScrollView> 
-      <Buttonlist
-        title = "다음"
-        routename = "counseltalknet3"
+      </ScrollView>
+      <Buttonlist 
+        title="확인"
+        routename="counseltalknet"
       />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  viewstyle : {
+  viewstyle:{
     flex:1,
     justifyContent : 'center'
   }
 });
 
-export default counseltalknet2;
+export default counseltalkdul3;

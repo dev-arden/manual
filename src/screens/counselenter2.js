@@ -23,7 +23,7 @@ const counselenter2 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info.png')}
+          imageSource={require('../../assets/enter.png')}
         />
         <Textlist 
           text="지금 발급받지 않아도 이후 원하실 때 언제든 신청이 가능합니다."

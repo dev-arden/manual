@@ -1,11 +1,7 @@
 import React from 'react';
 import {Text, View, StyleSheet, FlatList} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-import { ScrollView } from 'react-native-gesture-handler';
 import TitlewithoutImage from "../components/TitlewithoutImage";
-import Titlelist from '../components/Titlelist';
-import Checkicon from '../components/Checkicon';
-import Shorttext from "../components/Shoretext";
 import Buttonlist from "../components/Buttonlist";
 import { SafeAreaView } from 'react-native';
 import CheckText from '../components/CheckText';
@@ -14,33 +10,22 @@ const counselready2 = ({navigation}) => {
   const type = [
     {
       id: '1',
-      text : '법정서식 또는 PC 또는 태블릿 PC'
+      //text : '법정서식 또는 PC 또는 태블릿 PC'
+      text: '사전연명의료의향서 법정서식, 컴퓨터 또는 태블릿 PC'
     },
     {
       id: '2',
-      text : '의향서 설명 시 참고자료 또는 동영상'
+      //text : '의향서 설명 시 참고자료 또는 동영상'
+      text : '의향서 설명 시 참고자료: 상담그림카드, 상담일지, 동영상 또는 녹음기'
     },
     {
       id : '3',
-      text : '상담자의 신원 확인을 위한 등록기관 지정서와 상담자 신분 증명 등 신빙성 있는 근거 자료 '
+      //text : '상담자의 신원 확인을 위한 등록기관 지정서와 상담자 신분 증명 등 신빙성 있는 근거 자료 '
+      text : '상담자의 신원 확인을 위한 등록기관 지정서와 상담자 신분증'
     }
   ];
 
   return (
-    // <View style={styles.viewstyle}>
-    //   <TitlewithoutImage 
-    //     title="준비사항"
-    //   />
-    //   <CheckText 
-    //     text = "법정서식 또는 PC 또는 태블릿 PC"
-    //   />
-    //   <CheckText 
-    //     text = "의향서 설명 시 참고자료 또는 동영상"
-    //   />
-    //   <CheckText 
-    //     text = "상담자의 신원 확인을 위한 등록기관 지정서와 상담자 신분 증명 등 신빙성 있는 근거 자료"
-    //   />
-    // </View>
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
         title="준비사항"

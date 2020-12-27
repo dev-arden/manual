@@ -6,6 +6,7 @@ import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
 import Imagelist from "../components/Imagelist";
+import NavLink from '../components/NavLink';
 
 const counseltalkhana9 = () => {
   return (
@@ -15,15 +16,19 @@ const counseltalkhana9 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/maintain.png')}
+          imageSource={require('../../assets/talkhana.png')}
         />
         <Textlist 
           text="이 밖에도 담당의사가 환자의 상태와 상황에 따라 임종과정에 있는 환자의 이익을 위해 유보, 중단할 필요가 있다고 판단하는 시술이라면 중단할 수 있습니다."
         />
+        <NavLink 
+          text="추가 설명 확인하기"
+          routeName="counseltalkhana10"
+        />
       </ScrollView> 
       <Buttonlist
-        title = "완료"
-        routename = "counseltalk7"
+        title = "다음"
+        routename = "counseltalkdul1"
       />
     </SafeAreaView>
   );

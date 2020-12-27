@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Image,Text} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import Titlelist from '../components/Titlelist';
 import Textlist from '../components/Textlist';
-import CheckText from '../components/CheckText';
 import Buttonlist from '../components/Buttonlist';
+import { SafeAreaView } from 'react-native';
+import TitlewithoutImage from '../components/TitlewithoutImage';
 
 /**
  * 
@@ -14,28 +14,23 @@ import Buttonlist from '../components/Buttonlist';
 
 const counselid8 = ({navigation}) => {
   return (
-    <ScrollView>
-      <View style = {styles.viewstyle}>
-        <Titlelist 
-          title="[동행인 동석 시]"
-          imageSource={require('../../assets/divide.png')}
+    <SafeAreaView style={{flex:1}}>
+      <TitlewithoutImage 
+        title="추가 설명"
+      />
+      <ScrollView style={{flex:2}}>
+        <Textlist 
+          text="등록기관 상담자는 의향서 작성을 희망하는 사람에게 사전연명의료의향서의 의의 및 작성 전 알아야 할 사항에 대한 설명을 제공하고, 상담 일지 작성이 가능하다."
         />
         <Textlist 
-          text="사전연명의료의향서 작성은 본인의 자발적인 의사로 작성해야하므로 혹시라도 발생할 수 있는 동행인의 영향력을 차단하기 위해서 동행인과 분리하여 상담을 진행해야합니다."
+          text="상담 일지 작성 시 등록기관의 장은 작성자의 개인정보 관리에 힘써야 한다."
         />
-        <Textlist 
-          text="동행인은 잠시만 밖에서 대기해 주신다면 감사하겠습니다."
-        />
-        
-        <CheckText 
-          text="인지 맞춤상담의 경우 필요 시 동행인 동석"
-        />
-        <Buttonlist 
-          title="다음"
-          routename="counselid9"
-        />
-      </View>
-    </ScrollView>
+      </ScrollView>
+      <Buttonlist 
+        title="확인"
+        routename="counselid7"
+      />
+    </SafeAreaView>
   );
 };
 

@@ -7,6 +7,8 @@ import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
 import Imagelist from '../components/Imagelist';
+import NavLink from '../components/NavLink';
+import ButtonFinish from '../components/ButtonFinish';
 
 /**
  * 
@@ -22,18 +24,25 @@ const counselintro2 = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info.png')}
+          imageSource={require('../../assets/intro2.png')}
         />
         <Textlist 
-          text="사전연명의료의향서는 19세 이상의 사람이 미래에 연명의료의 대상이 될 경우를 대비하여 자신의 연명의료에 대한 의사를 미리, 직접 문서로 밝혀두는 것인데요."
+          text="사전연명의료의향서는 19세 이상의 성인이 미래에 연명의료의 대상이 될 경우를 대비하여 자신의 연명의료에 대한 중단과 호스피스에 관한 의사를 미리 직접 문서로 밝혀두는 것입니다."
         />
         <Textlist 
-          text="의향서는 건강할 때는 효력이 없지만 향후 임종과정에 있는 환자가 되었을때, 담당의사가 미리 작성된 의향서를 통해 환자의 뜻에 변함이 없는지 확인해서 환자의 연명의료결정을 실제로 이행할 수 있게 됩니다."
+          text="적법한 절차에 따라 작성된 의향서는 연명의료정보처리시스템에 등록되어 법적 효력을 발생하게 됩니다."
+        />
+        <Textlist 
+          text="의향서는 건강할 때는 효력이 없지만 나중에 임종과정에 있는 환자로 판단되었을 때, 담당의사가 미리 작성된 의향서를 통해 환자의 뜻에 변함이 없는지 확인해서 환자의 연명의료결정을 실제로 이행할 수 있게 됩니다."
+        />
+        <NavLink 
+          routeName="counselintro3"
+          text="추가 설명 확인하기"
         />
       </ScrollView>
-      <Buttonlist 
-        title="완료"
+      <ButtonFinish 
         routename="manual1"
+        routename2="counselcheck1"
       />
     </SafeAreaView>
   );

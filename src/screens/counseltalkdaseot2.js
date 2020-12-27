@@ -1,52 +1,51 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import Textlist from '../components/Textlist';
 import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
-import Imagelist from "../components/Imagelist";
+
 
 /**
  * 
- * 호스피스서비스 선택 및 이용에 대한 본인의 의향을 표시 할 수 있습니다. 
-작성자께서 호스피스에 대한 의향을 결정하지 못했다면 표시 하지 않아도 무방하고, 추후  호스피스이용에 관한 의향이 변경 된 경우 언제든지 변경 신청이 가능합니다.
-다만, 의향이 있다 하더라도 반드시 이용할 수 있는 것은 아니며 연명의료결정법 제 28조에 따른 별도의 호스피스 서비스 신청 절차를 거쳐야 하며, 추후  호스피스 대상 환자가 되었을 때 신청을 하셔도 됩니다. 
+ *  저는 보건복지부 지정을 받은 사전연명의료의향서 등록기관인 [기관명] 소속 상담사이며, 의향서 작성을 돕고 있습니다. 
+   [상담자 신분증과 등록기관 지정서 제시
  */
 
-const counseltalkdaseot2 = () => {
+const counseltalkdaseot2 = ({navigation}) => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="호스피스 이용 결정(2)"
+        title="추가 설명"
       />
       <ScrollView style={{flex:2}}>
-        <Imagelist 
-          imageSource={require('../../assets/maintain.png')}
-        />
         <Textlist 
-          text="호스피스서비스 선택 및 이용에 대한 본인의 의향을 표시 할 수 있습니다."
+          text="등록된 의향서는 작성자 본인에 의해 언제든지 조회·변경 또는 철회할 수 있음을 알리고 철회 시 해당 기록은 삭제됨을 설명한다."
         />
-        <Textlist 
-          text="작성자께서 호스피스에 대한 의향을 결정하지 못했다면 표시 하지 않아도 무방하고, 추후  호스피스이용에 관한 의향이 변경 된 경우 언제든지 변경 신청이 가능합니다."
-        />
-        <Textlist 
-          text="다만, 의향이 있다 하더라도 반드시 이용할 수 있는 것은 아니며 연명의료결정법 제 28조에 따른 별도의 호스피스 서비스 신청 절차를 거쳐야 하며, 추후  호스피스 대상 환자가 되었을 때 신청을 하셔도 됩니다."
-        />
-      </ScrollView> 
-      <Buttonlist
-        title = "완료"
-        routename = "counseltalk7"
+      </ScrollView>
+      <Buttonlist 
+        title="확인"
+        routename="counseltalkdaseot"
       />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  viewstyle : {
-    flex:1,
-    justifyContent : 'center'
-  }
+  viewstyle:{
+    marginHorizontal : 20,
+    //marginBottom : 20,
+    marginVertical : 15,
+    fontSize : 20,
+    borderWidth : 1,
+    borderColor : 'white',
+    color : 'white',
+    backgroundColor : 'white',
+    padding : 10,
+    flexDirection : 'row',
+    justifyContent:'space-around'
+ }
 });
 
 export default counseltalkdaseot2;

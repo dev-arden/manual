@@ -1,9 +1,13 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {StyleSheet,Image,View} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
-import Titlelist from '../components/Titlelist';
 import Textlist from '../components/Textlist';
 import Buttonlist from '../components/Buttonlist';
+import { SafeAreaView } from 'react-native';
+import TitlewithoutImage from '../components/TitlewithoutImage';
+import Imagelist from '../components/Imagelist';
+import NavLink from '../components/NavLink';
+import ButtonFinish from '../components/ButtonFinish';
 
 /**
  * 
@@ -13,32 +17,47 @@ import Buttonlist from '../components/Buttonlist';
 
 const counselid7 = ({navigation}) => {
   return (
-    <ScrollView>
-      <View style = {styles.viewstyle}>
-        <Titlelist 
-          title="개인정보 이용동의서"
-          imageSource={require('../../assets/agree2.png')} 
-        />
+    <SafeAreaView style={{flex:1}}>
+      <TitlewithoutImage 
+        title="사전연명의료의향서 상담일지"
+      />
+      <ScrollView style={{flex:2}}>
+        <View style={styles.viewstyle}>
+          <Image 
+            source={require('../../assets/id7.png')}
+            style={{height : 350, width : 330, resizeMode:'contain'}}
+          />
+        </View>
         <Textlist 
-          text="사전연명의료의향서 작성, 등록, 등록카드 발송을 위해 OOO님의 개인정보를 수집이용하고자 합니다."
+          text="본 상담일지양식은 예시로 제공된 것이며 기관 자율에 따라 자유롭게 상담일지를 작성•활용하실 수 있습니다. 다만 상담일지 작성시에는 개인정보보호법 위반이 되지 않도록 주의하세요."
         />
-        <Textlist 
-          text="다음의 내용을 충분히 읽어보신 후 동의해주시기 바랍니다."
+        <NavLink 
+          routeName="counselid8"
+          text="추가 설명 확인하기"
         />
-        <Buttonlist 
-          title="다음"
-          routename="counselid8"
-        />
-      </View>
-    </ScrollView>
+      </ScrollView>
+      <ButtonFinish 
+        routename="manual1"
+        routename2="counseltalk1"
+      />
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   viewstyle:{
-    flex:1,
-    justifyContent : 'center'
-  }
+    marginHorizontal : 20,
+    //marginBottom : 20,
+    marginVertical : 15,
+    fontSize : 20,
+    borderWidth : 1,
+    borderColor : 'white',
+    color : 'white',
+    backgroundColor : 'white',
+    padding : 10,
+    flexDirection : 'row',
+    justifyContent:'space-around'
+ }
 });
 
 export default counselid7;

@@ -17,11 +17,14 @@ const counselwrite2 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="작성 후"
+        title="작성 후 확인"
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/maintain.png')}
+          imageSource={require('../../assets/noname.png')}
+        />
+        <Textlist 
+          text="제가 내용을 잘 작성하셨는지 확인하겠습니다."
         />
         <Textlist 
           text="(작성 후 작성된 서식에 오기나 빠진 부분 또는 확인이 어려운 정보가 없는지 확인 한 후)"

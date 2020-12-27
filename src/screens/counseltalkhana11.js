@@ -1,35 +1,39 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import Textlist from '../components/Textlist';
-import Titlelist from '../components/Titlelist';
-import Buttonlist from '../components/Buttonlist';
+import {View, StyleSheet, Image} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import Textlist from '../components/Textlist';
+import Buttonlist from '../components/Buttonlist';
+import { SafeAreaView } from 'react-native';
+import TitlewithoutImage from '../components/TitlewithoutImage';
 
-const counseltalkhana11 = () => {
-  return(
-    <ScrollView>
-      <View style={styles.viewstyle}> 
-        <Titlelist 
-          title="설명사항"
-          imageSource={require('../../assets/hana6.png')}
-        />
+
+/**
+ * 
+ *  저는 보건복지부 지정을 받은 사전연명의료의향서 등록기관인 [기관명] 소속 상담사이며, 의향서 작성을 돕고 있습니다. 
+   [상담자 신분증과 등록기관 지정서 제시
+ */
+
+const counseltalkhana11 = ({navigation}) => {
+  return (
+    <SafeAreaView style={{flex:1}}>
+      <TitlewithoutImage 
+        title="추가 설명"
+      />
+      <ScrollView style={{flex:2}}>
         <Textlist 
-          text="이 밖에 항암제, 수혈, 혈관을 수축시키는 등 담당의사가 판단하여 치료효과없이 임종과정의 기간만을 연장하는 시술들이 있습니다."
+          text="호스피스의 의미와 이용 대상 환자, 호스피스 서비스 제공 기관 및 신청 방법 등에 관한 사항을 개괄적으로 설명하고, 이용 의향을 표시하도록 안내"
         />
-        <Textlist 
-          text="이러한 연명의료를 OOO님께서 만일 죽음에 임박하셨을 때 치료 효과 없이 임종과정의 기간만 연장하게 된다는 담당의사의 의학적 판단이 있는 경우 시행하지 않거나 중단하겠다는 의사를 미리 결정해 두는 것입니다."
-        />
-        <Buttonlist 
-          title="다음"
-          routename="counseltalkhana12"
-        />
-      </View>    
-    </ScrollView>
-  )
+      </ScrollView>
+      <Buttonlist 
+        title="확인"
+        routename="counseltalkdul"
+      />
+    </SafeAreaView>
+  );
 };
 
 const styles = StyleSheet.create({
-  viewstyle : {
+  viewstyle:{
     flex:1,
     justifyContent : 'center'
   }

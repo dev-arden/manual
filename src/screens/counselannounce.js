@@ -20,7 +20,7 @@ const counselannounce = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info.png')}
+          imageSource={require('../../assets/announce.png')}
         />
         <Textlist 
           text="사전연명의료의향서 작성이 완료되었습니다."
