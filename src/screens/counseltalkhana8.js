@@ -15,7 +15,7 @@ const counseltalkhana8 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/talkhana8.png')}
+          imageSource={require('../../assets/talkhana8.jpg')}
         />
         <Textlist 
           text="생명을 위협할 정도의 저혈압이나 쇼크상태에서 혈관을 수축시키는 혈압상승제를 사용합니다."

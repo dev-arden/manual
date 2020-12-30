@@ -24,7 +24,7 @@ const counselintro2 = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/intro2.png')}
+          imageSource={require('../../assets/intro2.jpg')}
         />
         <Textlist 
           text="사전연명의료의향서는 19세 이상의 성인이 미래에 연명의료의 대상이 될 경우를 대비하여 자신의 연명의료에 대한 중단과 호스피스에 관한 의사를 미리 직접 문서로 밝혀두는 것입니다."

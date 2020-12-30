@@ -22,7 +22,7 @@ const counselid2 = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/algo.png')}
+          imageSource={require('../../assets/id2.jpg')}
         />
         <Textlist 
           text="저희 등록기관은 OOO님께 사전연명의료의향서 작성 시 도움이 필요한 지 아닌지의 여부를 판단하기 위해 몇 가지 질문을 드립니다."
@@ -44,7 +44,7 @@ const counselid2 = ({navigation}) => {
         />
         <NavLink 
           text="추가 설명 확인하기"
-          routeName="counselid6"
+          routeName="counselid55"
         />
       </ScrollView>
       <Buttonlist 

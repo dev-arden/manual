@@ -22,7 +22,7 @@ const counselintro = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info3.png')}
+          imageSource={require('../../assets/intro.jpg')}
         />
         <Textlist 
           text="먼저 연명의료결정제도와 사전연명의료의향서를 간단히 소개해드릴께요."

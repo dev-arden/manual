@@ -21,7 +21,7 @@ const counselid5 = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/test.png')}
+          imageSource={require('../../assets/id5.jpg')}
         />
         <Textlist 
           text="이 검사는 사전연명의료의향서를 직접 작성하기 위해 필요한 의사결정능력 여부를 판단하기 위한 간단한 질문입니다."

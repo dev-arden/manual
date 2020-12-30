@@ -15,7 +15,7 @@ const counseltalkhana4 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/talkhana4.png')}
+          imageSource={require('../../assets/talkhana4.jpg')}
         />
         <Textlist 
           text="일반 암환자에게는 암을 축소, 억제, 제거하기 위해 항암제를 투여합니다."

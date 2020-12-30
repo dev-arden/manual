@@ -5,6 +5,7 @@ import Textlist from '../components/Textlist';
 import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
+import Exwithhead from '../components/Exwithhead';
 /**
  * 
  *  저는 보건복지부 지정을 받은 사전연명의료의향서 등록기관인 [기관명] 소속 상담사이며, 의향서 작성을 돕고 있습니다. 
@@ -18,11 +19,13 @@ const counselid6 = ({navigation}) => {
         title="추가 설명"
       />
       <ScrollView style={{flex:2}}>
-        <Textlist 
-          text="한국형 간편인지검사(KO3DY): 4점=정상; 3점=경도인지저하(mild); 2점=중등도인지저하(moderate); 1점이하=중증도인지저하(severe)"
+        <Exwithhead 
+          title="한국형 간편인지검사(KO3DY)"
+          text="4점=정상; 3점=경도인지저하(mild); 2점=중등도인지저하(moderate); 1점이하=중증도인지저하(severe)"
         />
-        <Textlist 
-          text="참고: Molnar FJ, Benjamin S, Hawkins SA, Briscoe M, Ehsan S. One Size Does Not Fit All: Choosing Practical Cognitive Screening Tools for Your Practice. Journal of the American Geriatric Society. 2020;68(10):2207-2213."
+        <Exwithhead 
+          title="참고"
+          text="Molnar FJ, Benjamin S, Hawkins SA, Briscoe M, Ehsan S. One Size Does Not Fit All: Choosing Practical Cognitive Screening Tools for Your Practice. Journal of the American Geriatric Society. 2020;68(10):2207-2213."
         />
         <Textlist 
           text="4점·3점은 표준상담진행, 2점 이하는 인지맞춤상담"

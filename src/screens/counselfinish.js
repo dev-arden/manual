@@ -17,20 +17,20 @@ const counselfinish = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="사전연명의료의향서 작성 완료"
+        title="사전연명의료의향서 작성 완료 안내"
       />
       <ScrollView style={{flex:2}}>
-      <Imagelist 
-          imageSource={require('../../assets/finish.png')}
+        <Imagelist 
+          imageSource={require('../../assets/finish.jpg')}
         />
         <Textlist 
-          text="등록증 발급을 신청하신 경우, 사전연명의료의향서 등록증이 작성자님께서 요청하신 주소지로 배송될 예정입니다."
+          text="이제 사전연명의료의향서 작성과 등록의 모든 과정이 완료되었습니다."
         />
         <Textlist 
-          text="배송기간은 2개월 정도 소요될 예정입니다."
+          text="등록카드 발급을 신청하신 경우, 작성자님께서 요청하신 주소지로 2개월 이내 사전연명의료의향서 등록카드가 우편 배송됩니다."
         />
         <Textlist 
-          text="귀가하신 후 궁금한 점이 있으시면 저희 등록기관이나 국립연명의료관리기관(1855-0075/수신자부담 1422-25)으로 연락해주시기 바랍니다."
+          text="귀가하신 후 궁금한 점이 있으시면 저희 등록기관이나 국립연명의료관리기관(1855-0075/ 수신자부담 1422-25)로 연락해주시기 바랍니다."
         />
       </ScrollView> 
       <Buttonlist

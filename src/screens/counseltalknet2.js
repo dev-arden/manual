@@ -13,7 +13,7 @@ import TitlewithoutImage from '../components/TitlewithoutImage';
    [상담자 신분증과 등록기관 지정서 제시
  */
 
-const counseltalkdul3 = ({navigation}) => {
+const counseltalknet2 = ({navigation}) => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
@@ -45,4 +45,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default counseltalkdul3;
+export default counseltalknet2;

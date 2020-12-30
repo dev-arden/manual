@@ -15,7 +15,7 @@ const counseltalkhana5 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/talkhana5.png')}
+          imageSource={require('../../assets/talkhana5.jpg')}
         />
         <Textlist 
           text="인공호흡기는 질환으로 인하여 환자의 호흡이 불안정하고 폐 기능이 상실될 때, 입으로 넣은 기관 내 튜브에 연결하여 생명을 구하는 기계입니다."

@@ -15,7 +15,7 @@ const counseltalk3 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/form2.png')}
+          imageSource={require('../../assets/talk3.jpg')}
         />
         <Textlist 
           text="사전연명의료의향서는 19세 이상의 성인이 향후 자신의 연명의료중단 등 결정과 호스피스 이용에 관한 의사를 직접 문서로 작성한 것을 말합니다."

@@ -20,7 +20,7 @@ const counseltalkset = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/talkset.png')}
+          imageSource={require('../../assets/talkset.jpg')}
         />
         <Textlist 
           text="사전연명의료의향서의 효력 및 효력 상실에 관한 사항에 대하여 설명해 드리겠습니다."

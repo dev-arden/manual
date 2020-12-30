@@ -20,7 +20,8 @@ const styles = StyleSheet.create({
     flex:1,
     margin : 5,
     //alignSelf: 'center'
-    textAlign: 'justify'
+    //textAlign: 'justify'
+    textAlign : 'auto'
   },
   viewstyle:{
     //borderWidth:1,

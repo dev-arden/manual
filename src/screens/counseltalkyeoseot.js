@@ -23,7 +23,7 @@ const counseltalkyeoseot = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/talknet.png')}
+          imageSource={require('../../assets/talkyeoseot.jpg')}
         />
         <Textlist 
           text="등록기관의 폐업·휴업 및 지정 취소에 따른 기록의 이관에 관하여 설명해 드리겠습니다."

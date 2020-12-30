@@ -23,7 +23,7 @@ const counselcheck = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/check.png')}
+          imageSource={require('../../assets/check.jpg')}
         />
         <Textlist 
           text="사전연명의료의향서는 작성한 후에라도 언제든지 변경·철회할 수 있습니다."

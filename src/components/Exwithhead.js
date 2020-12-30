@@ -1,16 +1,16 @@
 import React from 'react';
 import {Text, TouchableOpacity, StyleSheet,View} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
-
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 const Exwithhead = ({title,text}) => {
   return (
     <View style={styles.exliststyle}>
-      <View style = {styles.iconstyle}>
-        <AntDesign name="exclamationcircleo" size={25} color="black"/>
+      <View style = {styles.viewstyle}>
+        <FontAwesome name="square" size={17} color="black" style={{alignSelf:'center'}}/>
+        <Text style={styles.titlestyle}>
+          {title}
+        </Text>
       </View>
-      <Text style={styles.titlestyle}>
-        {title}
-      </Text>
       <Text style={styles.textstyle}>
         {text}
       </Text>   
@@ -19,9 +19,6 @@ const Exwithhead = ({title,text}) => {
 };
 
 const styles = StyleSheet.create({
-  iconstyle:{
-    alignSelf : 'center'
-  },
   exliststyle:{
     marginHorizontal : 20,
     marginVertical : 15,
@@ -40,21 +37,23 @@ const styles = StyleSheet.create({
     flex:1,
     //margin : 5,
     //alignSelf: 'center'
-    textAlign: 'justify',
-  },
-  titleviewstyle:{
-    flexDirection : 'row',
-    alignSelf: 'center',
-    paddingHorizontal: 10,
-    margin : 5,
-  },
-  textviewstyle:{
-    borderWidth:2
+    textAlign: 'auto',
   },
   titlestyle:{
     alignSelf : 'center',
     //marginLeft : 10,
     fontSize:20,
+    fontWeight : 'bold',
+    marginLeft : 10,
+    // borderColor : 'black',
+    // borderWidth : 1
+  },
+  viewstyle: {
+    flexDirection : 'row',
+    marginBottom : 10,
+    alignContent : 'center',
+    // borderColor : 'black',
+    // borderWidth : 1
   }
 });
 

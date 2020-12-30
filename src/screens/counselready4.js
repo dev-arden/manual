@@ -24,7 +24,7 @@ const counselready4 = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/noname.png')}
+          imageSource={require('../../assets/ready4.jpg')}
         />
         <Textlist 
           text="[동행자와 함께 방문한 경우]"

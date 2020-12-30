@@ -15,7 +15,7 @@ const counseltalkhana = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/talkhana.png')}
+          imageSource={require('../../assets/talkhana.jpg')}
         />
         <Textlist 
           text="임종과정에 있는 환자가 되었을 때 임종기간을 연장하는 연명의료 시술의 종류에 대해서 상담그림카드로 설명해 드리겠습니다."

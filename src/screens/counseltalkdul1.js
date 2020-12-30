@@ -14,7 +14,7 @@ const counseltalkdul1 = ({navigation}) => {
       />
       <View style={{flex:2, justifyContent:'center'}}>
         <TitleImage 
-          imageSource = {require('../../assets/noname.png')}
+          imageSource = {require('../../assets/talkdul1.jpg')}
           style={{justifyContent:'center'}}
         /> 
       </View>

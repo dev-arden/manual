@@ -6,6 +6,7 @@ import Textlist from '../components/Textlist';
 import TitlewithoutImage from "../components/TitlewithoutImage";
 import Buttonlist from "../components/Buttonlist";
 import { SafeAreaView } from 'react-native';
+import Imagelist from '../components/Imagelist';
 
 const counselready3 = ({navigation}) => {
   return (
@@ -14,6 +15,9 @@ const counselready3 = ({navigation}) => {
           title="1:1 상담실 이동"
         />
         <ScrollView style={{flex:2}}>
+            <Imagelist 
+              imageSource={require('../../assets/ready3.jpg')}
+            />
             <Textlist
               //text="사전연명의료의향서 작성을 원하는 방문자를 기밀성 보장을 위해 작성자를 독립성이 보장된 ‘1:1 상담실’로 안내합니다."
               text="사전연명의료의향서 작성을 원하는 방문자를 상담내용이 밖으로 들리지 않는 ‘1:1 상담실’로 안내한다."

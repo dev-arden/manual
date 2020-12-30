@@ -15,7 +15,7 @@ const counseltalkhana2 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/talkhana2.png')}
+          imageSource={require('../../assets/talkhana2.jpg')}
         />
         <Textlist 
           text="심폐소생술은 가슴압박과 인공호흡을 시행하여 정지된 심장을 대신해 심장과 뇌에 산소가 포함된 혈액을 공급해주는 응급처치입니다."

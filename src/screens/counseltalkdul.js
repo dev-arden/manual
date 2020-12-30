@@ -16,7 +16,7 @@ const counseltalkdul = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/noname.png')}
+          imageSource={require('../../assets/talkdul.jpg')}
         />
         <Textlist 
           text="사전연명의료의향서 작성 시 호스피스 이용 의향을 선택할 수 있습니다."

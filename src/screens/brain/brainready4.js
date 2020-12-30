@@ -1,0 +1,59 @@
+import React from 'react';
+import {View, StyleSheet, Image} from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import Textlist from '../../components/Textlist';
+import { SafeAreaView } from 'react-native';
+import TitlewithoutImage from '../../components/TitlewithoutImage';
+import Imagelist from '../../components/Imagelist';
+import NavLink from "../../components/NavLink";
+import ButtonFinish from '../../components/ButtonFinish';
+
+/**
+ * 
+ *  저는 보건복지부 지정을 받은 사전연명의료의향서 등록기관인 [기관명] 소속 상담사이며, 의향서 작성을 돕고 있습니다. 
+   [상담자 신분증과 등록기관 지정서 제시
+ */
+
+const brainready4 = ({navigation}) => {
+  return (
+    <SafeAreaView style={{flex:1}}>
+      <TitlewithoutImage 
+        title="동행자 동석 상담"
+      />
+      <ScrollView style={{flex:2}}>
+        <Imagelist 
+          imageSource={require('../../../assets/ready4.jpg')}
+        />
+        <Textlist 
+          text="[동행자와 함께 방문한 경우]"
+        />
+        <Textlist 
+          text="사전연명의료의향서의 작성은 혹시라도 발생할 수 있는 동행하신 분의 영향력을 차단하기 위해서 독립된 공간에서 1:1 상담을 통해 진행해야 합니다."
+        />
+        <Textlist 
+          text="하지만 보호자께서 함께 하셔서 OOO님께서 불안하지 않고 내용을 충분히 이해하실 수 있도록 도와주시면 감사하겠습니다."
+        />
+        <Textlist 
+          text="또 향후 발생할 수 있는 상황에 대한 사전 교육도 함께 하시면 감사하겠습니다."
+        />
+        <NavLink 
+          routeName="brainready5"
+          text="추가 설명 확인하기"
+        />
+      </ScrollView>
+      <ButtonFinish 
+        routename="brainmanual"
+        routename2="braininfo1"
+      />
+    </SafeAreaView>
+  );
+};
+
+const styles = StyleSheet.create({
+  viewstyle:{
+    flex:1,
+    justifyContent : 'center'
+  }
+});
+
+export default brainready4;

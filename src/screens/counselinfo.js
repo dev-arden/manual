@@ -24,7 +24,7 @@ const counselinfo = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info2.png')}
+          imageSource={require('../../assets/info.jpg')}
         />
         <Textlist 
           text="안녕하세요."

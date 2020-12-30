@@ -16,7 +16,7 @@ const counseltalk2 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/info3.png')}
+          imageSource={require('../../assets/talk2.jpg')}
         />
         <Textlist 
           text="연명의료는 임종과정에 있는 환자에게 하는 심폐소생술, 혈액 투석, 항암제 투여, 인공호흡기 착용과 그 밖에 법으로 정하는 의학적 시술로서 치료효과 없이 임종과정의 기간만을 연장하는 것을 말합니다."

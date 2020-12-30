@@ -15,12 +15,15 @@ const counseltalk = () => {
         title="사전연명의료의향서 작성의미"
       />
       <ScrollView style={{flex:2}}>
-        <View style={styles.newliststyle}>
+        {/* <View style={styles.newliststyle}>
           <Image 
             source = {require('../../assets/form.png')}
             style = {{height: 400 , width: 330, resizeMode: 'contain'}}
           />
-        </View>
+        </View> */}
+        <Imagelist 
+          imageSource = {require('../../assets/talk.jpg')}
+        />
         <Textlist 
           text="지금부터 사전연명의료의향서를 작성하기 위해 이해해야 할 내용에 대해 설명해 드리겠습니다."
         />

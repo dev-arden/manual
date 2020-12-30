@@ -15,7 +15,7 @@ const counseltalkhana6 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/talkhana6.png')}
+          imageSource={require('../../assets/talkhana6.jpg')}
         />
         <Textlist 
           text="체외생명유지술은 정맥의 피를 뽑아 기계를 통해 산소를 보충하고 이산화탄소를 제거한 다음 다시 혈관으로 계속해서 주입하는 방법입니다."

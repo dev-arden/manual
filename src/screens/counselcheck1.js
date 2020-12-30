@@ -14,7 +14,7 @@ const counselcheck1 = () => {
       />
       <View style={{flex:2, justifyContent:'center'}}>
         <TitleImage 
-          imageSource = {require('../../assets/noname.png')}
+          imageSource = {require('../../assets/check1.jpg')}
           style={{justifyContent:'center'}}
         /> 
       </View>

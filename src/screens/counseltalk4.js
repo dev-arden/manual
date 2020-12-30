@@ -15,7 +15,7 @@ const counseltalk4 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/find.png')}
+          imageSource={require('../../assets/talk4.jpg')}
         />
         <Textlist 
           text="사전연명의료의향서는 반드시 보건복지부지정을 받은 등록기관에 소속된 상담자를 통해 충분한 설명을 듣고 작성할 수 있으며, 별도의 비용은 청구되지 않습니다."

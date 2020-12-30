@@ -37,13 +37,13 @@ const counseltype = ({navigation}) => {
     },
     {
       id: '6',
-      title: '외국인 맞춤 상담',
-      icon : <Ionicons name="earth" size={30} />
+      title: '비문해 맞춤 상담',
+      icon : <Ionicons name="language" size={30} />
     },
     {
       id: '7',
-      title: '비문해 맞춤 상담',
-      icon : <Ionicons name="language" size={30} />
+      title: '외국인 맞춤 상담',
+      icon : <Ionicons name="earth" size={30} />
     }
   ];
 

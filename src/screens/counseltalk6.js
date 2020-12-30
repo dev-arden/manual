@@ -15,7 +15,7 @@ const counseltalk6 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/6.png')}
+          imageSource={require('../../assets/talk6.jpg')}
         />
         <Textlist 
           text="지금부터 000께서 사전연명의료의향서를 작성하는데 반드시 이해하셔야 하는 6가지 내용을 설명해 드리겠습니다."
@@ -35,7 +35,7 @@ const counseltalk6 = () => {
       </ScrollView> 
       <Buttonlist
         title = "다음"
-        routename = "counseltalk7"
+        routename = "counseltalkhana1"
       />
     </SafeAreaView>
   );

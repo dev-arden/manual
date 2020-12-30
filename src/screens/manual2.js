@@ -10,13 +10,13 @@ const manual2 = ({navigation}) => {
     {
       id: '1',
       title : '시각 맞춤 상담',
-      nav : 'blind',
+      nav : 'blind1',
       icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="orange"/>
     },
     {
       id: '2',
       title: '사전연명의료의향서 작성',
-      nav : 'manual1',
+      nav : 'blindmanual',
       icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="orange"/>
     },
   ];
@@ -32,7 +32,7 @@ const manual2 = ({navigation}) => {
           keyExtractor = {(item)=> item.id}
           data = {type}
           renderItem={({item}) => 
-            <TouchableOpacity onPress={() => navigation.navigate('counsel'+`${item.nav}`)}>
+            <TouchableOpacity onPress={() => navigation.navigate(`${item.nav}`)}>
               <View style={styles.liststyle}>
                   <View style={{alignSelf:"center"}}>
                     {item.icon}

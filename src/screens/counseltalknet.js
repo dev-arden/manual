@@ -22,7 +22,7 @@ const counseltalknet = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/talknet.png')}
+          imageSource={require('../../assets/talknet.jpg')}
         />
         <Textlist 
           text="사전연명의료의향서의 작성, 등록, 보관 및 통보에 관한 사항에 대하여 설명드리겠습니다."

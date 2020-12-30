@@ -6,6 +6,7 @@ import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
 import Imagelist from "../components/Imagelist";
+import ButtonFinish from '../components/ButtonFinish';
 
 /**
 사전연명의료의향서 작성이 완료되었습니다. 
@@ -16,11 +17,11 @@ const counselannounce = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="사전연명의료의향서 등록 설명"
+        title="작성된 사전연명의료의향서 등록통보 안내"
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/announce.png')}
+          imageSource={require('../../assets/announce.jpg')}
         />
         <Textlist 
           text="사전연명의료의향서 작성이 완료되었습니다."
@@ -29,9 +30,9 @@ const counselannounce = () => {
           text="작성해주신 사전연명의료의향서가 국립연명의료관리기관 시스템에 등록이 완료되면 작성자님의 휴대폰으로 “OOO님의 사전연명의료의향서가 시스템(www.lst.go.kr)에 등록 되었습니다.” 라고 문자가 발송됩니다."
         />
       </ScrollView> 
-      <Buttonlist
-        title = "완료"
-        routename = "manual1"
+      <ButtonFinish 
+        routename="manual1"
+        routename2="counselfinish1"
       />
     </SafeAreaView>
   );

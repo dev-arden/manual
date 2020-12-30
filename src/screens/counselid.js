@@ -24,7 +24,7 @@ const counselid = ({navigation}) => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/id.png')}
+          imageSource={require('../../assets/id.jpg')}
         />
         <Textlist 
           text="OOO님께서 사전연명의료의향서의 작성을 원하신다면, 본인 확인을 위해 신분증을 보여주시기 바랍니다."

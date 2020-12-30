@@ -14,7 +14,7 @@ const counselid1 = () => {
       />
       <View style={{flex:2, justifyContent:'center'}}>
         <TitleImage 
-          imageSource = {require('../../assets/noname.png')}
+          imageSource = {require('../../assets/id1.jpg')}
           style={{justifyContent:'center'}}
         /> 
       </View>

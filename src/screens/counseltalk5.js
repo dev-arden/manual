@@ -15,7 +15,7 @@ const counseltalk5 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/action.png')}
+          imageSource={require('../../assets/talk5.jpg')}
         />
         <Textlist 
           text="사전연명의료의향서를 작성한 후, 추후 의료기관에서 의사 2인으로부터 임종과정에 있는 환자로 판단되면, 본인 의사를 확인 후 연명의료에 대한 중단 등 결정이 가능합니다."

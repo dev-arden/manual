@@ -22,6 +22,9 @@ const counseltalkdaseot = () => {
         title="사전연명의료의향서의 변경, 철회 및 그에 따른 조치에 관한 사항"
       />
       <ScrollView style={{flex:2}}>
+        <Imagelist 
+          imageSource={require('../../assets/talkdaseot.jpg')}
+        />
         <Textlist 
           text="등록된 사전연명의료의향서는 작성자 본인의 의사가 변경된 경우 언제든지 변경 또는 철회가 가능하다."
         />

@@ -16,7 +16,7 @@ const counseltalkhana9 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/talkhana.png')}
+          imageSource={require('../../assets/talkhana9.jpg')}
         />
         <Textlist 
           text="이 밖에도 담당의사가 환자의 상태와 상황에 따라 임종과정에 있는 환자의 이익을 위해 유보, 중단할 필요가 있다고 판단하는 시술이라면 중단할 수 있습니다."

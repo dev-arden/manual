@@ -14,13 +14,13 @@ const counselenter1 = () => {
       />
       <View style={{flex:2, justifyContent:'center'}}>
         <TitleImage 
-          imageSource = {require('../../assets/noname.png')}
+          imageSource = {require('../../assets/enter1.jpg')}
           style={{justifyContent:'center'}}
         /> 
       </View>
       <Buttonlist 
         title = "다음"
-        routename = "counselinfo2"
+        routename = "counselenter"
       />
     </SafeAreaView>
   );

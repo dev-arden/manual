@@ -15,7 +15,7 @@ const counseltalkhana3 = () => {
       />
       <ScrollView style={{flex:2}}>
         <Imagelist 
-          imageSource={require('../../assets/talkhana3.png')}
+          imageSource={require('../../assets/talkhana3.jpg')}
         />
         <Textlist 
           text="우리 몸에서 콩팥은 노폐물을 걸러내고 소변을 만들어 배출하는 중요한 역할을 담당합니다."

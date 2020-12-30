@@ -12,13 +12,9 @@ const counselready1 = ({navigation}) => {
         title="1단계"
         text="사전연명의료의향서 상담을 위한 준비"
       />
-      {/* <Titletwo 
-        title="1단계 사전연명의료의향서 상담을 위한 준비"
-        //text="사전연명의료의향서 상담을 위한 준비"
-      /> */}
       <View style={{flex:2, justifyContent:'center'}}>
         <TitleImage 
-          imageSource = {require('../../assets/noname.png')}
+          imageSource = {require('../../assets/ready1.jpg')}
           style={{justifyContent:'center'}}
         /> 
       </View>

@@ -5,6 +5,7 @@ import Textlist from '../components/Textlist';
 import Buttonlist from '../components/Buttonlist';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../components/TitlewithoutImage';
+import ExImage from '../components/ExImage';
 
 
 /**
@@ -29,7 +30,7 @@ const counseltalkset2 = ({navigation}) => {
         <Textlist 
           text="의향서가 작성되어 등록된 후에 연명의료계획서가 다시 작성된 경우에는 연명의료계획서 작성 이후부터 의향서가 효력을 잃게 됨을 설명한다."
         />
-        <Textlist 
+        {/* <Textlist 
           text="연명의료계획서"
         />
         <View style={styles.viewstyle}>
@@ -37,11 +38,17 @@ const counseltalkset2 = ({navigation}) => {
             source={require('../../assets/set2.png')}
             style={{height : 400, width : 330, resizeMode:'contain'}}
           />
-        </View>
+        </View> */}
+        <ExImage 
+          title="연명의료계획서"
+          text=""
+          imageSource={require('../../assets/set2.png')}
+          imageStyle={{height : 400, width : 330, resizeMode:'contain'}}
+        />
       </ScrollView>
       <Buttonlist 
         title="확인"
-        routename="counseltalknet1"
+        routename="counseltalkset"
       />
     </SafeAreaView>
   );
