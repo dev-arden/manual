@@ -6,5 +6,5 @@
 * 서버:구글 firebase,Node.js
 
 ## 스크린샷 - IOS
-![Alt text](/img/1.jpg)
+![Alt text](/img/1.png)
 ## 스크린샷 - Android
