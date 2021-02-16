@@ -13,13 +13,13 @@ const eduform = ({navigation}) => {
       id: '1',
       title : '개요',
       nav : 'sum1',
-      icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="#5C709D"/>
     },
     {
       id: '2',
       title: '사전연명의료의향서 작성지원 절차',
       nav : 'sup1',
-      icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="#5C709D"/>
     },
   ];
 
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   },
   btboxview:{
     flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
+    backgroundColor : '#D5DCE9',
     height : 60,
     margin : 15,
     borderRadius : 20,
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
     justifyContent : 'center'
   },
   titlestyle:{
-    fontSize:25,
+    fontSize:21,
     fontWeight:'bold', 
     color:'black',
     // borderWidth: 1,

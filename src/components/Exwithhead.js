@@ -35,9 +35,10 @@ const styles = StyleSheet.create({
     color:'black',
     //paddingHorizontal: 10,
     flex:1,
-    //margin : 5,
+    margin : 5,
     //alignSelf: 'center'
     textAlign: 'auto',
+    lineHeight:30
   },
   titlestyle:{
     alignSelf : 'center',

@@ -1,103 +1,49 @@
 import React from 'react';
-import {Text, View, StyleSheet, FlatList, Image} from 'react-native';
+import {StyleSheet, ScrollView} from 'react-native';
 import Buttonlist from "../../components/Buttonlist";
-import TitleImage from "../../components/TitleImage";
 import { SafeAreaView } from 'react-native';
-import Titletwo from '../../components/Titletwo';
+import Titledisable2 from '../../components/Titledisable2';
+import Textlist from '../../components/Textlist';
+import ExonlyHead from '../../components/ExonlyHead';
 
-const disableready1 = ({navigation}) => {
+const disableready1 = ({}) => {
   return (
     <SafeAreaView style={{flex:1}}>
-      <Titletwo 
+      {/* <Titletwo 
+        title="1단계"
+        text="사전연명의료의향서 상담을 위한 준비"
+      /> */}
+      <Titledisable2 
         title="1단계"
         text="사전연명의료의향서 신체맞춤상담을 위한 준비"
       />
-      <View style={{flex:2, justifyContent:'center'}}>
-        <TitleImage 
-          imageSource = {require('../../../assets/ready1.jpg')}
-          style={{justifyContent:'center'}}
-        /> 
-      </View>
+      <ScrollView style={{flex:2}}>
+        <ExonlyHead 
+          title="상담실 환경"
+        />
+        <Textlist 
+          text="• 개인상담전용실(2~5평)"
+        />
+        <Textlist 
+          text="• 테이블과 부드러운 등받이 의자(3~5개)"
+        />
+        <Textlist 
+          text="• 냉난방기와 온도점검, 소음점검, 따뜻한 조명과 밝은 계열의 커튼과 벽지"
+        />
+        <Textlist 
+          text="• 정리·정돈과 청결 유지"
+        />
+        <Textlist 
+          text="• 상담실문앞에 <상담 중> 표시"
+        />
+      </ScrollView>
       <Buttonlist 
         title = "다음"
-        routename = "disableready"
+        routename = "disableready2"
       />
     </SafeAreaView>
   );
 };
 
-const styles = StyleSheet.create({
-  titlestyle:{
-    fontSize:25,
-    fontWeight:'bold', 
-    color:'black',
-    // borderWidth: 1,
-    // borderColor : 'black',
-    alignSelf : 'center'
-  },
-  backgroundStyle:{
-    marginTop: 10,
-    backgroundColor: '#F0EEEE',
-    height:50,
-    borderRadius:5,
-    marginHorizontal: 15,
-    flexDirection: 'row',
-    marginBottom: 10
-  },
-  btboxview:{
-    flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
-    height : 60,
-    margin : 15,
-    borderRadius : 20,
-    //alignSelf: 'center',
-    justifyContent : 'center',
-    // borderWidth:2,
-    // borderColor: 'black'
-  },
-  titleview:{
-    backgroundColor : 'white',
-    justifyContent : 'space-around',
-    padding : 15,
-    margin : 15,
-    height : 80,
-    borderRadius : 20
-  },
-  viewstyle:{
-    flex:1,
-    justifyContent : 'center'
-  },
-  link:{
-    color: 'blue',
-    fontSize : 20,
-    //fontWeight : 'bold'
-  },
-  icon: {
-    fontSize:25
-  },
-  btstyle:{
-    fontSize:20
-    //fontWeight: 'bold'
-  },
-  liststyle: {
-    marginHorizontal : 20,
-    marginVertical : 15,
-    fontSize : 20,
-    borderWidth : 1,
-    borderColor : 'white',
-    color : 'white',
-    backgroundColor : 'white',
-    paddingVertical: 30,
-    paddingHorizontal : 20,
-    flexDirection : 'row'
-  },
-  buttonstyle : {
-    alignSelf: 'stretch',
-    marginHorizontal : 20,
-    marginBottom : 15,
-    borderWidth : 2,
-    // borderColor : 'black'
-  },
-});
 
 export default disableready1;

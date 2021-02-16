@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet, Platform, KeyboardAvoidingView, SafeAreaView} from 'react-native';
+import {Text, View, StyleSheet, Platform, KeyboardAvoidingView, SafeAreaView,Image} from 'react-native';
 //import Icon from 'react-native-vector-icons/FontAwesome';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
@@ -10,11 +10,17 @@ const HomeScreen = ({navigation}) => {
   return (
       <SafeAreaView style={{flex : 1}}>        
         <View style={styles.viewstyle}>
-          <View>
+          <View style={{flexDirection:'row',marginBottom:30,justifyContent:'flex-end'}}>
+            <Image 
+              source={require('../../assets/opentype04.jpg')}
+              style={{height : 120, width : 200, resizeMode:'contain'}}
+            />
+          </View>
+          <View style={{marginTop:30, marginBottom:30, flex:2,justifyContent:'center'}}>
             <Text style={styles.textstyle}>사전연명의료의향서</Text>
             <Text style={styles.textstyle}>맞춤상담매뉴얼</Text>
           </View>
-          <View style={styles.buttonstyle}>
+          <View style={{marginVertical:50,marginHorizontal:15}}>
             <Button
               icon={
                 <AntDesign
@@ -24,7 +30,7 @@ const HomeScreen = ({navigation}) => {
                 />
               }
               iconRight
-              onPress={() => navigation.navigate('counseltype')}
+              onPress={() => navigation.navigate('eduhome')}
               //raised
               title="시작하기"
               type="outline"
@@ -40,8 +46,8 @@ const HomeScreen = ({navigation}) => {
 const styles = StyleSheet.create({
   viewstyle: {
     flex :1,
-    alignItems : 'center',
-    justifyContent : 'center',
+    //alignItems : 'center',
+    //justifyContent : 'center',
     // borderWidth : 2,
     // borderColor : 'red'
   },

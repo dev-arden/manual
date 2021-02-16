@@ -24,25 +24,28 @@ const edukind7 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="연명의료 시술의 종류"
+        title="6.연명의료 시술의 종류"
       />
       <ScrollView style={{flex:2}}>
-        <Numhead 
+        {/* <Numhead 
           title="중단할 수 있는 연명의료 시술"
-        />
+        /> */}
         <ExonlyHead 
           title="혈압상승제 투여"
         />
         <Textlist 
-          text="혈관 수축제를 투여하는 방법으로서 쇼크, 중증 저혈압, 심근경색이나 심부전일 때에 인위적으로 혈압을 상승시키는 약제를 투여하는 것이다."
+          text="혈관 수축제를 투여하는 방법으로서 쇼크, 중증 저혈압, 심근경색이나 심부전일 때에 인위적으로 혈압을 상승시키는 약제를 투여하는 것."
         />
         <Textlist 
-          text="지속하여 사용 시 사지괴저 등의 합병증을 유발할 수 있다."
+          text="지속하여 사용 시 사지괴저 등의 합병증을 유발할 수 있음."
         />
-        <Exwithhead 
+        <Textlist 
+          text="주의: 임종에 직면시에 해당됨."
+        />
+        {/* <Exwithhead 
           title="주의"
           text="임종에 직면시에 해당된다."
-        />
+        /> */}
       </ScrollView> 
       <Buttonlist 
         title="다음"

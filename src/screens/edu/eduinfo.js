@@ -18,43 +18,43 @@ const type = [
     id: '1',
     title : '배경',
     nav : 'back1',
-    icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="orange"/>
+    icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="#5C709D"/>
   },
   {
     id: '2',
     title: '목적',
     nav : 'purpose1',
-    icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="orange"/>
+    icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="#5C709D"/>
   },
   {
     id: '3',
     title: '주요 용어',
     nav : 'word1',
-    icon : <MaterialCommunityIcons name="numeric-3-box" size={25} color="orange"/>
+    icon : <MaterialCommunityIcons name="numeric-3-box" size={25} color="#5C709D"/>
   },
   {
     id: '4',
     title: '관리체계',
     nav : 'rule1',
-    icon : <MaterialCommunityIcons name="numeric-4-box" size={25} color="orange"/>
+    icon : <MaterialCommunityIcons name="numeric-4-box" size={25} color="#5C709D"/>
   },
   {
     id: '5',
     title: '연명의료에 대한 의사결정 과정',
     nav : 'process1',
-    icon : <MaterialCommunityIcons name="numeric-5-box" size={25} color="orange"/>
+    icon : <MaterialCommunityIcons name="numeric-5-box" size={25} color="#5C709D"/>
   },
   {
     id: '6',
     title: '연명의료 시술의 종류',
     nav : 'kind1',
-    icon : <MaterialCommunityIcons name="numeric-6-box" size={25} color="orange"/>
+    icon : <MaterialCommunityIcons name="numeric-6-box" size={25} color="#5C709D"/>
   },
   {
     id: '7',
-    title: '호스피스/완화의료',
+    title: '호스피스·완화의료',
     nav : 'hos1',
-    icon : <MaterialCommunityIcons name="numeric-7-box" size={25} color="orange"/>
+    icon : <MaterialCommunityIcons name="numeric-7-box" size={25} color="#5C709D"/>
   },
 ];
 
@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   },
   btboxview:{
     flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
+    backgroundColor : '#D5DCE9',
     height : 60,
     margin : 15,
     borderRadius : 20,
@@ -133,7 +133,7 @@ const styles = StyleSheet.create({
     justifyContent : 'center'
   },
   titlestyle:{
-    fontSize:25,
+    fontSize:21,
     fontWeight:'bold', 
     color:'black',
     // borderWidth: 1,

@@ -2,9 +2,10 @@ import React from 'react';
 import {StyleSheet,Text} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native';
-import TitlewithoutImage from '../../components/TitlewithoutImage';
+import Titledisable from '../../components/Titledisable';
 import ButtonFinish from '../../components/ButtonFinish';
 import Icontext from '../../components/Icontext';
+import Textlist from '../../components/Textlist';
 
 /**
  * 이제 의향서를 등록하고자 합니다. 
@@ -16,17 +17,17 @@ import Icontext from '../../components/Icontext';
 const disable2 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
-      <TitlewithoutImage 
+      <Titledisable 
         title="신체장애인 응대 시 상담자세"
       />
       <ScrollView style={{flex:2}}>
-        <Icontext 
+        <Textlist 
           text="대부분 의사소통이 가능하고 정신은 명료하기에 직접 서명에 대한 의지를 확인하고 진행할 수 있다."
         />
-        <Icontext 
+        <Textlist 
           text="팔과 손의 강직이 심한 경우 손이 제멋대로 움직여서 작성시간이 오래 걸릴 수 있으나, 최대한 작성자의 마음과 자세를 편하게 유도함과 동시에 충분한 시간을 제공한다."
         />
-        <Icontext 
+        <Textlist 
           text="상담 시 작성자가 아닌 보호자를 보면서 대화하는 것을 피한다."
         />
       </ScrollView> 

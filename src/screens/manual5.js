@@ -7,15 +7,15 @@ const manual5 = ({navigation}) => {
   const type = [
     {
       id: '1',
-      title : '인지 맞춤 상담',
+      title : '인지맞춤상담',
       nav : 'brain1',
-      icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="#8C6294"/>
     },
     {
       id: '2',
       title: '사전연명의료의향서 작성',
       nav : 'brainmanual',
-      icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="#8C6294"/>
     },
   ];
 
@@ -23,7 +23,7 @@ const manual5 = ({navigation}) => {
     <SafeAreaView style={{flex:1}}>
       <View style = {styles.btboxview}> 
         <Text style={styles.titlestyle} >
-          인지 맞춤 상담
+          인지맞춤상담
         </Text>
       </View>
         <FlatList 
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   },
   btboxview:{
     flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
+    backgroundColor : '#D2C2D5',
     height : 60,
     margin : 15,
     borderRadius : 20,

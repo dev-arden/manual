@@ -24,6 +24,7 @@ const ExImage = ({title,text,imageSource,imageStyle}) => {
   );
 };
 
+
 const styles = StyleSheet.create({
   exliststyle:{
     marginHorizontal : 20,
@@ -41,9 +42,10 @@ const styles = StyleSheet.create({
     color:'black',
     //paddingHorizontal: 10,
     flex:1,
-    //margin : 5,
+    margin : 5,
     //alignSelf: 'center'
     textAlign: 'justify',
+    lineHeight:30
   },
   titlestyle:{
     alignSelf : 'center',

@@ -769,6 +769,7 @@ import edukind8 from "./src/screens/edu/edukind8";
 import edukind9 from "./src/screens/edu/edukind9";
 
 import eduhos1 from "./src/screens/edu/eduhos1";
+import eduhos2 from "./src/screens/edu/eduhos2";
 import eduform from "./src/screens/edu/eduform";
 
 import edusum1 from "./src/screens/edu/edusum1";
@@ -1522,11 +1523,11 @@ const counselFlow = createStackNavigator(
     foreignannounce1 : foreignannounce1,
 
   },
-  // {
-  //   defaultNavigationOptions: {
-  //     title: '상담매뉴얼'
-  //   }
-  // }
+  {
+    defaultNavigationOptions: {
+      title: 'PART 2'
+    }
+  }
   );
 
 const eduFlow = createStackNavigator(
@@ -1553,16 +1554,17 @@ const eduFlow = createStackNavigator(
     edukind9 : edukind9,
 
     eduhos1 : eduhos1,
+    eduhos2 : eduhos2,
     eduform : eduform,
     edusum1 : edusum1,
     edusum2 : edusum2,
     edusup1 : edusup1
   },
-  // {
-  //   defaultNavigationOptions: {
-  //     title: '교육매뉴얼'
-  //   }
-  // }
+  {
+    defaultNavigationOptions: {
+      title: 'PART 1'
+    }
+  }
 );
 
 homeFlow.navigationOptions = {
@@ -1580,7 +1582,7 @@ homeFlow.navigationOptions = {
 };
 
 counselFlow.navigationOptions = {
-  tabBarLabel: '상담매뉴얼',
+  tabBarLabel: 'PART2',
   // tabBarOptions: {
   //   labelStyle: {
   //     fontSize: 15,
@@ -1594,7 +1596,7 @@ counselFlow.navigationOptions = {
 };
 
 eduFlow.navigationOptions = {
-  tabBarLabel: '교육매뉴얼',
+  tabBarLabel: 'PART1',
   // tabBarOptions: {
   //   labelStyle: {
   //     fontSize: 15,
@@ -1634,8 +1636,8 @@ eduFlow.navigationOptions = {
 const navigator = createBottomTabNavigator(
   {
     homeFlow,
-    counselFlow,
     eduFlow,
+    counselFlow,
     //blessedFlow
   },
   {

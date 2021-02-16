@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, StyleSheet,View,Image} from 'react-native';
+import {Button, StyleSheet,View,Image,Text} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../../components/TitlewithoutImage';
@@ -10,6 +10,7 @@ import Textlist from '../../components/Textlist';
 import ButtonFinish from '../../components/ButtonFinish';
 import ExImage from '../../components/ExImage';
 import ExonlyHead from '../../components/ExonlyHead';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 /**
  * 이제 의향서를 등록하고자 합니다. 
@@ -22,10 +23,24 @@ const edusum2 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="개요"
+        title="1.개요"
       />
       <ScrollView style={{flex:2}}>
-        <ExonlyHead 
+        <View style={styles.exliststyle}>
+          <View style = {styles.exviewstyle}>
+            <FontAwesome name="square" size={17} color="black" style={{alignSelf:'center'}}/>
+            <Text style={styles.extitlestyle}>
+              사전연명의료의향서 서식
+            </Text>
+          </View>
+            <Text style={styles.extextstyle}>
+            - 해당 서식은 법정서식이므로 내용을 변경할 수는 없다.
+            </Text> 
+            <Text style={styles.extextstyle}>
+            - 의향서 등록증 발급 여부 또는 간편인지검사 후 점수는 서식 가장자리를 이용하여 기입할 수 있다.
+            </Text>
+        </View>
+        {/* <ExonlyHead 
           title="사전연명의료의향서 서식"
         />
         <Textlist 
@@ -33,11 +48,19 @@ const edusum2 = () => {
         />
         <Textlist 
           text="의향서 등록증 발급 여부 또는 간편인지검사 후 점수 기입은 서식 가장자리를 이용하여 작성할 수 있다."
-        />
+        /> */}
+        {/* <View style={styles.viewstyle}>
+          <View style={{justifyContent:'center'}}>
+            <Image 
+              source={require('../../../assets/sum2.png')}
+              style={{height : 400, width : 350, resizeMode:'contain'}}
+            />
+          </View>
+        </View> */}
         <View style={styles.viewstyle}>
           <Image 
-            source={require('../../../assets/form.png')}
-            style={{height : 400, width : 330, resizeMode:'contain'}}
+            source={require('../../../assets/sum2.png')}
+            style={{height : 500, width : 330, resizeMode:'contain'}}
           />
         </View>
       </ScrollView> 
@@ -68,9 +91,47 @@ const styles = StyleSheet.create({
     borderColor : 'white',
     color : 'white',
     backgroundColor : 'white',
-    padding : 10,
+    //padding : 10,
     flexDirection : 'row',
-    justifyContent:'space-around'
+    justifyContent:'center'
+ },
+  exliststyle:{
+    marginHorizontal : 20,
+    marginVertical : 15,
+    borderWidth : 1,
+    borderColor : 'white',
+    color : 'white',
+    backgroundColor : 'white',
+    // paddingVertical: 30,
+    // paddingHorizontal : 20,
+    padding : 10
+  },
+  extextstyle: {
+    fontSize:20,
+    color:'black',
+    //paddingHorizontal: 10,
+    flex:1,
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30
+  },
+  
+  extitlestyle:{
+    alignSelf : 'center',
+    //marginLeft : 10,
+    fontSize:20,
+    fontWeight : 'bold',
+    marginLeft : 10,
+    // borderColor : 'black',
+    // borderWidth : 1
+  },
+  exviewstyle: {
+    flexDirection : 'row',
+    marginBottom : 10,
+    alignContent : 'center',
+    // borderColor : 'black',
+    // borderWidth : 1
   }
 });
 

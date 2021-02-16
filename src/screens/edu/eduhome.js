@@ -3,25 +3,28 @@ import {Button, Text, View, StyleSheet,TouchableOpacity, FlatList,SafeAreaView} 
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
+
+//#3E538D
+//#5C709D
 const eduhome = ({navigation}) => {
   const type = [
     {
       id: '1',
       title : '연명의료결정제도 개요',
       nav : 'eduinfo',
-      icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="#5C709D"/>
     },
     {
       id: '2',
       title: '사전연명의료의향서',
       nav : 'eduform',
-      icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="#5C709D"/>
     },
     {
       id: '3',
       title: '관련 동영상',
       nav : 'eduvideo',
-      icon : <MaterialCommunityIcons name="numeric-3-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-3-box" size={25} color="#5C709D"/>
     },
   ];
 
@@ -87,7 +90,10 @@ const styles = StyleSheet.create({
   },
   btboxview:{
     flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
+    //backgroundColor : '#FDF6E3',
+    backgroundColor : '#D5DCE9',
+    //borderColor : '#5C709D',
+    //borderWidth : 5,
     height : 60,
     margin : 15,
     borderRadius : 20,
@@ -101,7 +107,7 @@ const styles = StyleSheet.create({
     justifyContent : 'center'
   },
   titlestyle:{
-    fontSize:25,
+    fontSize:21,
     fontWeight:'bold', 
     color:'black',
     // borderWidth: 1,

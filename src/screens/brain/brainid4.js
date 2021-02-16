@@ -1,43 +1,119 @@
 import React from 'react';
-import {View, StyleSheet, Image} from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import Textlist from '../../components/Textlist';
-import Buttonlist from '../../components/Buttonlist';
+import {View, StyleSheet, Image,ScrollView} from 'react-native';
 import { SafeAreaView } from 'react-native';
-import TitlewithoutImage from '../../components/TitlewithoutImage';
-/**
- * 
- *  저는 보건복지부 지정을 받은 사전연명의료의향서 등록기관인 [기관명] 소속 상담사이며, 의향서 작성을 돕고 있습니다. 
-   [상담자 신분증과 등록기관 지정서 제시
- */
+import Titlebrain2 from '../../components/Titlebrain2';
+//import Buttonlist from '../components/Buttonlist';
+import ButtonFinish from '../../components/ButtonFinish';
+import Textlist from '../../components/Textlist';
 
-const brainid4 = ({navigation}) => {
+const brainid4 = ({}) => {
   return (
     <SafeAreaView style={{flex:1}}>
-      <TitlewithoutImage 
-        title="추가 설명"
+      <Titlebrain2 
+        title="5단계"
+        text="작성자 본인 및 의사결정능력 확인"
       />
-      <ScrollView style={{flex:2}}>
-        <Textlist 
-          text="사전연명의료의향서는 19세 이상 본인이 직접 작성해야 하므로 신분증(주민등록증, 운전면허증, 장애인 등록증, 여권, 외국인 등록증)을 확인한다."
-        />
-        <Textlist 
-          text="장애인 등록증은 주민등록번호 기재여부, 여권과 외국인 등록증은 유효기간을 확인한다."
-        />
+      <ScrollView style={{flex:2}}> 
+          <View style={styles.viewstyle}>
+            <Image 
+              source={require('../../../assets/counselid4.png')}
+              style={{height : 400, width : 330, resizeMode:'contain', alignSelf:'center'}}
+            />
+          </View>
+          <Textlist 
+            text="• 등록기관 상담자는 의향서 작성을 희망하는 사람에게 사전연명의료의향서의 의의 및 작성 전 알아야 할 사항에 대한 설명을 제공하고, 상담 일지 작성이 가능하다."
+          />
+          <Textlist 
+            text="• 상담일지 작성 시 등록기관의 장은 작성자의 개인정보 관리에 힘써야 한다."
+          />
       </ScrollView>
-      <Buttonlist 
-        title="확인"
-        routename="brainid"
+      <ButtonFinish 
+        routename="brainmanual"
+        routename2="braintalk1"
       />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  viewstyle:{
+  exliststyle:{
+    marginHorizontal : 20,
+    marginVertical : 15,
+    borderWidth : 1,
+    borderColor : 'white',
+    color : 'white',
+    backgroundColor : 'white',
+    // paddingVertical: 30,
+    // paddingHorizontal : 20,
+    padding : 10
+  },
+  extextstyle: {
+    fontSize:20,
+    color:'black',
+    //paddingHorizontal: 10,
     flex:1,
-    justifyContent : 'center'
-  }
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30
+  },
+  plustextstyle: {
+    fontSize:20,
+    color:'#8C6294',
+    //paddingHorizontal: 10,
+    flex:1,
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30
+  },
+  talkliststyle:{
+    marginHorizontal : 20,
+    marginVertical : 15,
+    borderWidth : 1,
+    borderColor : 'grey',
+    //color : '#DAD9DB',
+    backgroundColor : '#ECECEB',
+    // paddingVertical: 30,
+    // paddingHorizontal : 20,
+    padding : 10,
+    borderRadius : 15
+  },
+  talkheadstyle: {
+    fontSize:20,
+    color:'#8C6294',
+    //paddingHorizontal: 10,
+    flex:1,
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30,
+    fontWeight:'bold'
+  },
+  talktextstyle: {
+    fontSize:22,
+    color:'black',
+    //paddingHorizontal: 10,
+    flex:1,
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30,
+    fontWeight:'bold'
+  },
+  viewstyle:{
+    marginHorizontal : 20,
+    //marginBottom : 20,
+    marginVertical : 15,
+    fontSize : 20,
+    borderWidth : 1,
+    borderColor : 'white',
+    color : 'white',
+    backgroundColor : 'white',
+    padding : 10,
+    //flexDirection : 'row',
+    justifyContent:'space-around',
+ },
 });
 
 export default brainid4;

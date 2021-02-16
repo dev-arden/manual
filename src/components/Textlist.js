@@ -16,18 +16,20 @@ const styles = StyleSheet.create({
   textstyle:{
     fontSize:20,
     color:'black',
-    paddingHorizontal: 10,
+    //paddingHorizontal: 10,
     flex:1,
     margin : 5,
     //alignSelf: 'center'
     //textAlign: 'justify'
-    textAlign : 'auto'
+    textAlign : 'auto',
+    lineHeight : 30
   },
   viewstyle:{
     //borderWidth:1,
     backgroundColor: 'white',
     marginHorizontal : 20,
     marginVertical : 15,
+    padding : 10
   }
 });
 

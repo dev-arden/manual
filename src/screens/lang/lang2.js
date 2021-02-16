@@ -2,9 +2,10 @@ import React from 'react';
 import {StyleSheet,Text} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native';
-import TitlewithoutImage from '../../components/TitlewithoutImage';
+import Titlelang from '../../components/Titlelang';
 import ButtonFinish from '../../components/ButtonFinish';
 import Icontext from '../../components/Icontext';
+import Textlist from '../../components/Textlist';
 
 /**
  * 이제 의향서를 등록하고자 합니다. 
@@ -16,18 +17,21 @@ import Icontext from '../../components/Icontext';
 const lang2 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
-      <TitlewithoutImage 
+      <Titlelang 
         title="비문해자 응대 시 상담자세"
       />
       <ScrollView style={{flex:2}}>
-        <Icontext 
+        <Textlist 
+          text="비문해자는 한글을 모른다는 사실을 드러내는 상황에 대해 매우 민감해할 수 있으므로 조심스러운 접근이 필요하다."
+        />
+        <Textlist 
           text="작성자가 한글을 모르는 경우: 녹화나 녹취 등으로 작성자 본인의 뜻임을 확인할 수 있는 경우에 한하여 대필을 통한 작성이 가능하다."
         />
-        <Icontext 
+        <Textlist 
           text="의사소통이 어려운 경우: 커뮤니케이션 보드 및 언어카드 등을 활용한다."
         />
-        <Icontext 
-          text="사전연명의료의향서 작성 전에 작성자 본인의 자발적 의사 여부를 반드시 확인해야 하며, 동석자는 작성자가 동의한 경우에만 작성 과정에 참여할 수 있다."
+        <Textlist 
+          text="사전연명의료의향서 작성 전에 작성자 본인의 자발적 의사 여부를 반드시 확인해야하며, 동석자는 작성자가 동의한 경우에만 작성 과정에 참여할 수 있다."
         />
       </ScrollView> 
       <ButtonFinish 

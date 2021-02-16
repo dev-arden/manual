@@ -23,30 +23,42 @@ const eduprocess2 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="연명의료에 대한 의사결정 과정"
+        title="5.연명의료에 대한 의사결정 과정"
       />
       <ScrollView style={{flex:2}}>
-        <View style={styles.viewstyle}>
-          <Image 
-            source={require('../../../assets/eduprocess1.png')}
-            style={{height : 150, width : 330, resizeMode:'contain'}}
-          />
-        </View>
         <ExonlyHead 
           title="연명의료계획서"
         />
         <Textlist 
-          text="의료기관윤리위원회가 설치된 의료기관에서 말기환자로 진단을 받거나 임종과정에 있는 환자로 판단을 받으면 담당의사와 충분한 논의를 통해 연명의료계획서를 작성할 수 있다."
+          text="의료기관윤리위원회가 설치된 의료기관에서 말기환자로 진단을 받거나 임종과정에 있는 환자로 판단을 받으면 담당의사와 충분한 논의를 통해 연명의료계획서를 작성할 수 있다."
         />
         <Textlist 
-          text="말기환자 또는 임종과정에 잇는 환자가 연명의료계획서를 작성한 후 마음이 바뀌면 언제든지 담당의사와 상의하여 작성내용을 변경 또는 철회할 수 있다."
+          text="말기환자 또는 임종과정에 있는 환자가 연명의료계획서를 작성한 후 마음이 바뀌면 언제든지 담당의사와 상의하여 작성내용을 변경 또는 철회할 수 있다."
         />
-        <ExImage
+        <ExonlyHead 
           title="참고"
-          text="말기환자와 임종과정에 있는 환자 판단은 다음과 같이 연명의료결정법에 따른 기준에 근거하여 의사 2인이 종합적으로 판단한다."
+        />
+        <Textlist 
+          text="말기환자와 임종과정에 있는 환자 판단은 다음과 같이 연명의료결정법에 따른 기준에 근거하여 의사 2인이 종합적으로 판단한다."
+        />
+        <View style={styles.viewstyle}>
+          <View style={{justifyContent:'center'}}>
+            <Image 
+              source={require('../../../assets/process2.png')}
+              style={{height : 170, width : 330, resizeMode:'contain'}}
+            />
+            <Image 
+              source={require('../../../assets/process22.png')}
+              style={{height : 170, width : 330, resizeMode:'contain'}}
+            />
+          </View>
+        </View>
+        {/* <ExImage
+          title="참고"
+          text="말기환자와 임종과정에 있는 환자 판단은 다음과 같이 연명의료결정법에 따른 기준에 근거하여 의사 2인이 종합적으로 판단한다."
           imageSource={require('../../../assets/eduprocess2.png')}
           imageStyle={{height : 170, width : 330, resizeMode:'contain'}}
-        />
+        /> */}
       </ScrollView> 
       <Buttonlist 
         title="다음"

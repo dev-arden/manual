@@ -24,12 +24,12 @@ const edukind8 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="연명의료 시술의 종류"
+        title="6.연명의료 시술의 종류"
       />
       <ScrollView style={{flex:2}}>
-        <Numhead 
+        {/* <Numhead 
           title="중단할 수 있는 연명의료 시술"
-        />
+        /> */}
         <ExonlyHead 
           title="그 밖의 연명의료"
         />
@@ -37,7 +37,7 @@ const edukind8 = () => {
           text="그 밖에 담당의사가 환자의 최선의 이익을 보장하기 위해 시행하지 않거나, 중단할 필요가 있다고 의학적으로 판단하는 시술."
         />
         <Textlist 
-          text="해당 환자의 상황에 따라 담당의사가 치료효과 없이 임종과정의 기간만을 연장하는 것으로 판단하는 다양한 의학적 시술을 포괄한다."
+          text="해당 환자의 상황에 따라 담당의사가 치료효과 없이 임종과정의 기간만을 연장하는 것으로 판단하는 다양한 의학적 시술을 포괄함."
         />
       </ScrollView> 
       <Buttonlist 

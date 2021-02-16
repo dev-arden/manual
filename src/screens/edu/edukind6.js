@@ -24,12 +24,12 @@ const edukind6 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="연명의료 시술의 종류"
+        title="6.연명의료 시술의 종류"
       />
       <ScrollView style={{flex:2}}>
-        <Numhead 
+        {/* <Numhead 
           title="중단할 수 있는 연명의료 시술"
-        />
+        /> */}
         <ExonlyHead 
           title="수혈"
         />
@@ -37,12 +37,15 @@ const edukind6 = () => {
           text="수혈은 정맥에 정맥관(IV)을 삽입하여 혈액을 투여하는 시술로서, 신체가 혈액의 일부를 생성할 수 없거나 혈구가 제대로 활동하지 않을 때, 또는 피를 많이 흘렸을 때 필요할 수 있는 치료 방법."
         />
         <Textlist 
-          text="미열이나 피부발진과 같은 경미한 반응 또는 체액 과부하와 같은 부작용이 있을 수 있다. 이 밖에 자신에게 적합하지 않은 혈액의 수혈, 알레르기나 급성 폐 손상 등의 심각한 반응, 세균이나 바이러스 등의 감염 등의 문제가 있을 수 있다."
+          text="미열이나 피부발진과 같은 경미한 반응 또는 체액 과부하와 같은 부작용이 있을 수 있음. 이 밖에 자신에게 적합하지 않은 혈액의 수혈, 알레르기나 급성 폐 손상 등의 심각한 반응, 세균이나 바이러스 등의 감염 등의 문제가 있을 수 있음."
         />
-        <Exwithhead 
+        <Textlist 
+          text="주의: 임종에 직면시 혈액투석을 하지 않겠다는 의미임."
+        />
+        {/* <Exwithhead 
           title="주의"
           text="임종에 직면시 수혈을 하지 않겠다는 것이다."
-        />
+        />  */}
       </ScrollView> 
       <Buttonlist 
         title="다음"

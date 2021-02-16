@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native';
-import TitlewithoutImage from '../../components/TitlewithoutImage';
+import Titleforeign from '../../components/Titleforeign';
 import Buttonlist from '../../components/Buttonlist';
 import Exwithhead from '../../components/Exwithhead';
 import ExImage from '../../components/ExImage';
@@ -18,7 +18,7 @@ import Textlist from '../../components/Textlist';
 const foreign1 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
-      <TitlewithoutImage 
+      <Titleforeign 
         title="외국인"
       />
       <ScrollView style={{flex:2}}>
@@ -27,10 +27,10 @@ const foreign1 = () => {
           text="규정 신분증을 지참한 19세 이상의 외국인"
         />
         <ExImage 
-          title="신분확인(규정신분증"
+          title="신분확인(규정신분증)"
           text="여권 또는 출입국관리법 제33조 제1항에 따른 외국인 등록증(여권만료일, 외국인등록증 체류기간), 신분증(주민등록증, 운전면허증)"
           imageSource={require('../../../assets/foreign1.png')}
-          imageStyle={{height:150,width:330,resizeMode:'contain'}}
+          imageStyle={{height:180,width:330,resizeMode:'contain'}}
         />
         <Exwithhead 
           title="참고 사이트"

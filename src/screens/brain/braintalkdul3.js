@@ -1,51 +1,177 @@
 import React from 'react';
-import {View, StyleSheet, Image} from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import Textlist from '../../components/Textlist';
-import Buttonlist from '../../components/Buttonlist';
+import {Text, View, StyleSheet, Image,ScrollView} from 'react-native';
+import Buttonlist from "../../components/Buttonlist";
 import { SafeAreaView } from 'react-native';
-import TitlewithoutImage from '../../components/TitlewithoutImage';
+import Titlebrain2 from '../../components/Titlebrain2';
+//import Buttonlist from '../components/Buttonlist';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+import Textlist from '../../components/Textlist';
 
-
-/**
- * 
- *  저는 보건복지부 지정을 받은 사전연명의료의향서 등록기관인 [기관명] 소속 상담사이며, 의향서 작성을 돕고 있습니다. 
-   [상담자 신분증과 등록기관 지정서 제시
- */
-
-const braintalkdul3 = ({navigation}) => {
+const braintalkdul3 = ({}) => {
   return (
     <SafeAreaView style={{flex:1}}>
-      <TitlewithoutImage 
-        title="추가 설명"
+      <Titlebrain2 
+        title="6단계"
+        text="사전연명의료의향서 작성을 위한 항목 설명"
       />
       <ScrollView style={{flex:2}}>
+        <View style={styles.exliststyle}>
+          <Text style={{fontSize:21,fontWeight:'bold'}}>
+          ③ 사전연명의료의향서의 효력 및 효력 상실에 관한 사항
+          </Text>
+        </View>
+        <View style={styles.talkliststyle}>
+          <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+            <Fontisto name="quote-a-right" size={20}/>
+            <Fontisto name="quote-a-left" size={20}/>
+          </View>
+          <Text style={styles.talktextstyle}>
+          사전연명의료의향서의 효력 및 효력 상실에 관한 사항에 대하여 설명해 드리겠습니다.
+          </Text> 
+          <Text style={styles.talktextstyle}>
+          법에 따라 작성된 사전연명의료의향서는 연명의료에 관한 작성자 본인의 분명한 의사 표시로써, 향후 작성자가 임종과정에 있는 환자로 판단될 때 담당의사 (의사를 표현할 수 없는 의학적 상태인 경우 담당의사 및 해당분야 전문의)의 확인을 거쳐 연명의료를 시행하지 않거나 중단할 수 있는 효력을 가지게 됩니다.
+          </Text> 
+          <Text style={styles.talktextstyle}>
+          환자가 과거에 의향서를 작성해서 등록하였더라도, 말기 환자 또는 임종과정에 있는 환자로 판단된 경우 담당의사와 함께 연명의료계획서를 다시 작성할 수 있습니다.
+          </Text> 
+          <Text style={styles.talktextstyle}>
+          환자가 연명의료계획서를 작성한다면, 과거에 작성한 의향서의 효력은 상실됩니다.
+          </Text>
+          <Text style={styles.talktextstyle}>
+          의향서가 작성되었다 하더라도 본인이 직접 작성하지 않은 경우, 본인의 자발적 의사에 따라 작성되지 않은 경우, 작성 전 등록기관이 설명해야 할 내용이 제공되지 않거나 작성자의 확인을 받지 않은 경우에는 의향서로서의 효력이 인정되지 않습니다.
+          </Text>
+        </View> 
         <Textlist 
-        text="호스피스 서비스를 이용할 의향이 있다 하더라도 반드시 이용할 수 있는 것은 아니며 연명의료결정법 제28조에 따른 별도의 호스피스 서비스 신청 절차를 거쳐야 함을 설명한다."
-       />
-       <Textlist 
-        text="단, 지금 결정하는 것이 아니며 이용 의향이 있다면 향후 의사가 한 번 더 확인할 때 결정하면 된다."
-       />
-       <Textlist 
-        text="호스피스를 이용하려는 경우에는 호스피스 이용동의서와 의사가 발급하는 호스피스 대상 환자임을 나타내는 의사소견서를 첨부하여 호스피스전문기관에 신청"
-       />
-       <Textlist 
-        text="호스피스 이용 시 경제적 부담에 대해 간단히 설명한다.(본인부담금 5%, 이용기간, 대략적 본인부담금)"
-       />
+          text="• 적법하게 작성된 의향서는 연명의료에 관한 작성자 본인의 명시적 의사 표시로써, 향후 작성자가 임종과정에 있는 환자로 판단될 때 담당의사(의사를 표현할 수 없는 의학적 상태인 경우 담당의사 및 해당 분야 전문의)의 확인을 거쳐 연명의료를 시행하지 않거나 중단할 수 있는 효력을 가지게 됨을 설명한다."
+        />
+        <View style={styles.exliststyle}>
+          <Text style={styles.extextstyle}>
+          • 의향서가 작성되었다 하더라도
+          </Text> 
+          <Text style={styles.extextstyle}>
+          1)본인이 직접 작성하지 않은 경우,
+          </Text>
+          <Text style={styles.extextstyle}>
+          2)본인의 자발적 의사에 따라 작성되지 않은 경우, 
+          </Text>
+          <Text style={styles.extextstyle}>
+          3) 작성 전 등록기관이 설명해야 할 내용이 제공되지 않거나 작성자의 확인을 받지 않은 경우에는 의향서의 법적 효력이 인정되지 않음을 설명한다. 
+          </Text>  
+        </View>
+        <Textlist 
+          text="• 의향서가 작성되어 등록된 후에 연명의료계획서가 다시 작성된 경우에는 연명의료계획서 작성 이후부터 의향서가 효력을 잃게 됨을 설명한다."
+        /> 
+        <View style={styles.viewstyle}>
+          <Image 
+            source={require('../../../assets/dul3.png')}
+            style={{height : 500, width : 450, resizeMode:'contain', alignSelf:'center'}}
+          />
+        </View>
       </ScrollView>
       <Buttonlist 
-        title="확인"
-        routename="braintalkdul2"
+        title="다음"
+        routename="braintalkset1"
       />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  viewstyle:{
+  exliststyle:{
+    marginHorizontal : 20,
+    marginVertical : 15,
+    borderWidth : 1,
+    borderColor : 'white',
+    color : 'white',
+    backgroundColor : 'white',
+    // paddingVertical: 30,
+    // paddingHorizontal : 20,
+    padding : 10
+  },
+  extextstyle: {
+    fontSize:20,
+    color:'black',
+    //paddingHorizontal: 10,
     flex:1,
-    justifyContent : 'center'
-  }
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30
+  },
+  
+  extitlestyle:{
+    alignSelf : 'center',
+    //marginLeft : 10,
+    fontSize:20,
+    fontWeight : 'bold',
+    marginLeft : 10,
+    // borderColor : 'black',
+    // borderWidth : 1
+  },
+  exviewstyle: {
+    flexDirection : 'row',
+    marginBottom : 10,
+    alignContent : 'center',
+    // borderColor : 'black',
+    // borderWidth : 1
+  },
+  plustextstyle: {
+    fontSize:20,
+    color:'#8C6294',
+    //paddingHorizontal: 10,
+    flex:1,
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30
+  },
+  talkliststyle:{
+    marginHorizontal : 20,
+    marginVertical : 15,
+    borderWidth : 1,
+    borderColor : 'grey',
+    //color : '#DAD9DB',
+    backgroundColor : '#ECECEB',
+    // paddingVertical: 30,
+    // paddingHorizontal : 20,
+    padding : 10,
+    borderRadius : 15
+  },
+  talkheadstyle: {
+    fontSize:20,
+    color:'#8C6294',
+    //paddingHorizontal: 10,
+    flex:1,
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30,
+    fontWeight:'bold'
+  },
+  talktextstyle: {
+    fontSize:22,
+    color:'black',
+    //paddingHorizontal: 10,
+    flex:1,
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30,
+    fontWeight:'bold'
+  },
+  viewstyle:{
+    marginHorizontal : 20,
+    //marginBottom : 20,
+    marginVertical : 15,
+    fontSize : 20,
+    borderWidth : 1,
+    borderColor : 'white',
+    color : 'white',
+    backgroundColor : 'white',
+    padding : 10,
+    //flexDirection : 'row',
+    justifyContent:'space-around',
+ },
 });
 
 export default braintalkdul3;

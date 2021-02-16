@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet,View,Text} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native';
-import TitlewithoutImage from '../../components/TitlewithoutImage';
+import Titledisable from '../../components/Titledisable';
 import Buttonlist from '../../components/Buttonlist';
 import Exwithhead from '../../components/Exwithhead';
 import ExImage from '../../components/ExImage';
@@ -18,7 +18,7 @@ import IconIntext from '../../components/Icontext';
 const disable1 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
-      <TitlewithoutImage 
+      <Titledisable 
         title="신체장애인"
       />
       <ScrollView style={{flex:2}}>

@@ -24,25 +24,25 @@ const edukind5 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="연명의료 시술의 종류"
+        title="6.연명의료 시술의 종류"
       />
       <ScrollView style={{flex:2}}>
-        <Numhead 
+        {/* <Numhead 
           title="중단할 수 있는 연명의료 시술"
-        />
+        /> */}
         <ExonlyHead 
           title="항암제투여"
         />
         <Textlist 
-          text="암을 축소, 억제, 제거하기 위해 약물을 사용하는 의학적 시술로서, 암의 종류와 진행 정도에 따라 다양한 방법이 존재한다."
+          text="암을 축소, 억제, 제거하기 위해 약물을 사용하는 의학적 시술로서, 암의 종류와 진행 정도에 따라 다양한 방법이 존재함."
         />
         <Textlist 
-          text="항암제는 암세포에만 선택적으로 작용하는 것이 아니라 정상세포에도 손상을 입히기 때문에 위장장애, 탈모증 등 여러 가지 부작용을 동반할 수 있다."
+          text="항암제는 암세포에만 선택적으로 작용하는 것이 아니라 정상세포에도 손상을 입히기 때문에 위장장애, 탈모증 등 여러 가지 부작용을 동반할 수 있음."
         />
-        <Exwithhead 
+        {/* <Exwithhead 
           title="주의"
           text="임종에 직면시 항암제 투여를 하지 않겠다는 것이다."
-        />
+        /> */}
       </ScrollView> 
       <Buttonlist 
         title="다음"

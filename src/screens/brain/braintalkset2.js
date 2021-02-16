@@ -1,59 +1,138 @@
 import React from 'react';
-import {View, StyleSheet, Image} from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import Textlist from '../../components/Textlist';
-import Buttonlist from '../../components/Buttonlist';
+import {Text, View, StyleSheet, ScrollView} from 'react-native';
+import Buttonlist from "../../components/Buttonlist";
 import { SafeAreaView } from 'react-native';
-import TitlewithoutImage from '../../components/TitlewithoutImage';
-import ExImage from '../../components/ExImage';
+import Titlebrain2 from '../../components/Titlebrain2';
+//import Buttonlist from '../components/Buttonlist';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+import Textlist from '../../components/Textlist';
 
-/**
- * 
- *  저는 보건복지부 지정을 받은 사전연명의료의향서 등록기관인 [기관명] 소속 상담사이며, 의향서 작성을 돕고 있습니다. 
-   [상담자 신분증과 등록기관 지정서 제시
- */
-
-const braintalkset2 = ({navigation}) => {
+const braintalkset2 = ({}) => {
   return (
     <SafeAreaView style={{flex:1}}>
-      <TitlewithoutImage 
-        title="추가 설명"
+      <Titlebrain2 
+        title="6단계"
+        text="사전연명의료의향서 작성을 위한 항목 설명"
       />
       <ScrollView style={{flex:2}}>
+        <View style={styles.exliststyle}>
+          <Text style={{fontSize:21,fontWeight:'bold'}}>
+          ⑤ 사전연명의료의향서의 변경, 철회 및 그에 따른 조치에 관한 사항
+          </Text>
+        </View>
+        <View style={styles.talkliststyle}>
+          <View style={{flexDirection:'row', justifyContent:'space-between'}}>
+            <Fontisto name="quote-a-right" size={20}/>
+            <Fontisto name="quote-a-left" size={20}/>
+          </View>
+          <Text style={styles.talktextstyle}>
+          등록된 사전연명의료의향서는 작성자 본인의 의사가 변경된 경우 언제든지 변경 또는 철회가 가능합니다.
+          </Text> 
+          <Text style={styles.talktextstyle}>
+          변경 또는 철회를 원하시는 경우, 신분증을 가지고 가까운 등록기관에 방문하셔서 변경 의사를 밝히고, 변경된 내용으로 다시 작성할 수 있습니다. 
+          </Text> 
+          <Text style={styles.talktextstyle}>
+          철회를 원하시는 경우 철회 신청이 가능합니다.
+          </Text> 
+          <Text style={styles.talktextstyle}>
+          철회된 경우 해당 기록은 말소됩니다.
+          </Text>
+        </View> 
         <Textlist 
-          text="적법하게 작성된 의향서는 연명의료에 관한 작성자 본인의 명시적 의사 표시로서, 향후 작성자가 임종과정에 있는 환자로 판단될 때 담당의사(의사를 표현할 수 없는 의학적 상태인 경우 담당의사 및 해당 분야 전문의)의 확인을 거쳐 연명의료를 시행하지 않거나 중단할 수 있는 효력을 가지게 됨을 설명한다."
-        />
-        <Textlist 
-          text="의향서가 작성되었다 하더라도 1) 본인이 직접 작성하지 않은 경우, 2) 본인의 자발적 의사에 따라 작성되지 않은 경우, 3) 작성 전 등록기관이 설명해야 할 내용이 제공되지 않거나 작성자의 확인을 받지 않은 경우에는 의향서로서의 효력이 인정되지 않음을 설명한다."
-        />
-        <Textlist 
-          text="의향서가 작성되어 등록된 후에 연명의료계획서가 다시 작성된 경우에는 연명의료계획서 작성 이후부터 의향서가 효력을 잃게 됨을 설명한다."
-        />
-        {/* <Textlist 
-          text="연명의료계획서"
-        />
-        <View style={styles.viewstyle}>
-          <Image 
-            source={require('../../assets/set2.png')}
-            style={{height : 400, width : 330, resizeMode:'contain'}}
-          />
-        </View> */}
-        <ExImage 
-          title="연명의료계획서"
-          text=""
-          imageSource={require('../../../assets/set2.png')}
-          imageStyle={{height : 400, width : 330, resizeMode:'contain'}}
+          text="• 등록된 의향서는 작성자 본인에 의해 언제든지 조회·변경 또는 철회할 수 있음을 알리고 철회 시 해당 기록은 말소됨을 설명한다."
         />
       </ScrollView>
       <Buttonlist 
-        title="확인"
-        routename="braintalkset"
+        title="다음"
+        routename="braintalkset3"
       />
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  exliststyle:{
+    marginHorizontal : 20,
+    marginVertical : 15,
+    borderWidth : 1,
+    borderColor : 'white',
+    color : 'white',
+    backgroundColor : 'white',
+    // paddingVertical: 30,
+    // paddingHorizontal : 20,
+    padding : 10
+  },
+  extextstyle: {
+    fontSize:20,
+    color:'black',
+    //paddingHorizontal: 10,
+    flex:1,
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30
+  },
+  
+  extitlestyle:{
+    alignSelf : 'center',
+    //marginLeft : 10,
+    fontSize:20,
+    fontWeight : 'bold',
+    marginLeft : 10,
+    // borderColor : 'black',
+    // borderWidth : 1
+  },
+  exviewstyle: {
+    flexDirection : 'row',
+    marginBottom : 10,
+    alignContent : 'center',
+    // borderColor : 'black',
+    // borderWidth : 1
+  },
+  plustextstyle: {
+    fontSize:20,
+    color:'#8C6294',
+    //paddingHorizontal: 10,
+    flex:1,
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30
+  },
+  talkliststyle:{
+    marginHorizontal : 20,
+    marginVertical : 15,
+    borderWidth : 1,
+    borderColor : 'grey',
+    //color : '#DAD9DB',
+    backgroundColor : '#ECECEB',
+    // paddingVertical: 30,
+    // paddingHorizontal : 20,
+    padding : 10,
+    borderRadius : 15
+  },
+  talkheadstyle: {
+    fontSize:20,
+    color:'#8C6294',
+    //paddingHorizontal: 10,
+    flex:1,
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30,
+    fontWeight:'bold'
+  },
+  talktextstyle: {
+    fontSize:22,
+    color:'black',
+    //paddingHorizontal: 10,
+    flex:1,
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30,
+    fontWeight:'bold'
+  },
   viewstyle:{
     marginHorizontal : 20,
     //marginBottom : 20,
@@ -64,9 +143,9 @@ const styles = StyleSheet.create({
     color : 'white',
     backgroundColor : 'white',
     padding : 10,
-    flexDirection : 'row',
-    justifyContent:'space-around'
- }
+    //flexDirection : 'row',
+    justifyContent:'space-around',
+ },
 });
 
 export default braintalkset2;

@@ -11,61 +11,61 @@ const deafmanual = ({navigation}) => {
       id: '1',
       title : '사전연명의료의향서 청각맞춤상담을 위한 준비',
       nav : 'ready1',
-      icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="#2D68A0"/>
     },
     {
       id: '2',
       title: '등록기관 및 상담자 소개',
       nav : 'info1',
-      icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="#2D68A0"/>
     },
     {
       id: '3',
       title: '사전연명의료의향서 소개',
       nav : 'intro1',
-      icon : <MaterialCommunityIcons name="numeric-3-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-3-box" size={25} color="#2D68A0"/>
     },
     {
       id: '4',
       title: '사전연명의료의향서 작성 여부 확인',
       nav : 'check1',
-      icon : <MaterialCommunityIcons name="numeric-4-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-4-box" size={25} color="#2D68A0"/>
     },
     {
       id: '5',
       title: '작성자 본인 및 의사결정능력 확인',
       nav : 'id1',
-      icon : <MaterialCommunityIcons name="numeric-5-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-5-box" size={25} color="#2D68A0"/>
     },
     {
       id: '6',
       title: '사전연명의료의향서 작성을 위한 항목 설명',
       nav : 'talk1',
-      icon : <MaterialCommunityIcons name="numeric-6-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-6-box" size={25} color="#2D68A0"/>
     },
     {
       id: '7',
       title: '사전연명의료의향서 작성',
       nav : 'write1',
-      icon : <MaterialCommunityIcons name="numeric-7-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-7-box" size={25} color="#2D68A0"/>
     },
     {
       id: '8',
       title: '등록증 발급 여부 확인',
       nav : 'enter1',
-      icon : <MaterialCommunityIcons name="numeric-8-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-8-box" size={25} color="#2D68A0"/>
     },
     {
       id: '9',
       title: '작성된 사전연명의료의향서 등록 통보 안내',
       nav : 'announce1',
-      icon : <MaterialCommunityIcons name="numeric-9-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-9-box" size={25} color="#2D68A0"/>
     }, 
     {
       id: '10',
       title: '사전연명의료의향서 작성 완료 안내',
       nav : 'finish1',
-      icon : <MaterialCommunityIcons name="numeric-10-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-10-box" size={25} color="#2D68A0"/>
     }
   ];
 
@@ -73,7 +73,7 @@ const deafmanual = ({navigation}) => {
     <SafeAreaView style={{flex:1}}>
       <View style = {styles.btboxview}> 
         <Text style={styles.titlestyle} >
-          상담 과정
+          사전연명의료의향서 작성
         </Text>
       </View>
         <FlatList 
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
   },
   btboxview:{
     flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
+    backgroundColor : '#C5D0E2',
     height : 60,
     margin : 15,
     borderRadius : 20,

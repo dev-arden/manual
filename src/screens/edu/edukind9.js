@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet,View,Image, Button} from 'react-native';
+import {StyleSheet,View,Image, Button,Text} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../../components/TitlewithoutImage';
@@ -25,23 +25,39 @@ const edukind9 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="연명의료 시술의 종류"
+        title="6.연명의료 시술의 종류"
       />
       <ScrollView style={{flex:2}}>
-        <Num2head 
+        {/* <Num2head 
           title="연명의료 중 중단할 수 없는 항목"
+        /> */}
+        <View style={styles.exliststyle}>
+          <View style = {styles.exviewstyle}>
+            {/* <MaterialCommunityIcons name="numeric-1-circle-outline" size={25} color="black" style={{alignSelf:'center',fontWeight:'bold'}}/> */}
+            <Text style={{alignSelf:'center', fontSize:21,fontWeight:'bold'}}>
+              2)
+            </Text>
+            <View style={{flexDirection:'column'}}>
+              <Text style={styles.extitlestyle}>
+                연명의료중단 등 결정 이행 후
+              </Text>
+              <Text style={styles.extitlestyle}>
+                중단할 수 없는 의료행위
+              </Text>
+            </View>
+          </View>  
+        </View>
+        <Textlist 
+          text="- 통증 완화를 위한 의료 행위"
         />
         <Textlist 
-          text="통증 완화를 위한 의료 행위"
+          text="- 영양분 공급"
         />
         <Textlist 
-          text="영양분 공급"
+          text="- 물 공급"
         />
         <Textlist 
-          text="물 공급"
-        />
-        <Textlist 
-          text="산소의 단순 공급"
+          text="- 산소의 단순 공급"
         />
       </ScrollView> 
       <ButtonFinish 
@@ -74,7 +90,34 @@ const styles = StyleSheet.create({
     padding : 10,
     flexDirection : 'row',
     justifyContent:'space-around'
- }
+ },
+ exliststyle:{
+  marginHorizontal : 20,
+  marginVertical : 15,
+  borderWidth : 1,
+  borderColor : 'white',
+  color : 'white',
+  backgroundColor : 'white',
+  // paddingVertical: 30,
+  // paddingHorizontal : 20,
+  padding : 10
+},
+extitlestyle:{
+  alignSelf : 'stretch',
+  //marginLeft : 10,
+  fontSize:20,
+  fontWeight : 'bold',
+  marginLeft : 10,
+  // borderColor : 'black',
+  // borderWidth : 1
+},
+exviewstyle: {
+  flexDirection : 'row',
+  //marginBottom : 10,
+  alignContent : 'center',
+  borderColor : 'white',
+  borderWidth : 1
+}
 });
 
 export default edukind9;

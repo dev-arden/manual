@@ -1,11 +1,13 @@
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet,View,Image,Text} from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native';
 import TitlewithoutImage from '../../components/TitlewithoutImage';
 import Buttonlist from '../../components/Buttonlist';
 import Exwithhead from '../../components/Exwithhead';
 import ExImage from '../../components/ExImage';
+import ExonlyHead from '../../components/ExonlyHead';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 /**
  * 이제 의향서를 등록하고자 합니다. 
@@ -18,19 +20,42 @@ const edusup1 = () => {
   return (
     <SafeAreaView style={{flex:1}}>
       <TitlewithoutImage 
-        title="사전연명의료의향서 작성지원 절차"
+        title="2.사전연명의료의향서 작성지원 절차"
       />
       <ScrollView style={{flex:2}}>
-        <ExImage 
+        <ExonlyHead 
+          title = "등록기관의 의향서 상담 작성 지원 단계"
+        />
+        <View style={styles.viewstyle}>
+          <Image 
+            source={require('../../../assets/sup1.png')}
+            style={{height : 330, width : 330, resizeMode:'contain'}}
+          />
+        </View>
+        {/* <ExImage 
           title="등록기관의 의향서 상담 작성 지원 단계"
           text=""
-          imageSource={require('../../../assets/edusup1.png')}
+          imageSource={require('../../../assets/sup1.png')}
           imageStyle={{height : 150, width : 330, resizeMode:'contain'}}
-        />
-        <Exwithhead 
+        /> */}
+        {/* <Exwithhead 
           title="1단계"
-          text="사전연명의료의향서 상담을 위한 준비,독립된 상담실로 안내"
-        />
+          text="사전연명의료의향서 상담을 위한 준비 독립된 상담실로 안내"
+        /> */}
+        <View style={styles.exliststyle}>
+          <View style = {styles.exviewstyle}>
+            <FontAwesome name="square" size={17} color="black" style={{alignSelf:'center'}}/>
+            <Text style={styles.extitlestyle}>
+            1단계
+            </Text>
+          </View>
+          <Text style={styles.extextstyle}>
+          사전연명의료의향서 상담을 위한 준비
+            </Text> 
+            <Text style={styles.extextstyle}>
+            독립된 상담실로 안내
+            </Text> 
+        </View>
         <Exwithhead 
           title="2단계"
           text="등록기관 및 상담자 소개"
@@ -87,11 +112,55 @@ const styles = StyleSheet.create({
     textAlign: 'justify'
   },
   viewstyle:{
-    //borderWidth:1,
-    backgroundColor: 'white',
     marginHorizontal : 20,
+    //marginBottom : 20,
     marginVertical : 15,
-  }
+    fontSize : 20,
+    borderWidth : 1,
+    borderColor : 'white',
+    color : 'white',
+    backgroundColor : 'white',
+    padding : 10,
+    flexDirection : 'row',
+    justifyContent:'space-around'
+ },
+ exliststyle:{
+  marginHorizontal : 20,
+  marginVertical : 15,
+  borderWidth : 1,
+  borderColor : 'white',
+  color : 'white',
+  backgroundColor : 'white',
+  // paddingVertical: 30,
+  // paddingHorizontal : 20,
+  padding : 10
+},
+extextstyle: {
+  fontSize:20,
+  color:'black',
+  //paddingHorizontal: 10,
+  flex:1,
+  margin : 5,
+  //alignSelf: 'center'
+  textAlign: 'auto',
+  lineHeight:30
+},
+extitlestyle:{
+  alignSelf : 'center',
+  //marginLeft : 10,
+  fontSize:20,
+  fontWeight : 'bold',
+  marginLeft : 10,
+  // borderColor : 'black',
+  // borderWidth : 1
+},
+exviewstyle: {
+  flexDirection : 'row',
+  marginBottom : 10,
+  alignContent : 'center',
+  // borderColor : 'black',
+  // borderWidth : 1
+}
 });
 
 export default edusup1;

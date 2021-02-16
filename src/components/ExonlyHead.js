@@ -7,7 +7,7 @@ const ExonlyHead = ({title}) => {
   return (
     <View style={styles.exliststyle}>
       <View style = {styles.viewstyle}>
-        <FontAwesome name="square" size={17} color="black" style={{alignSelf:'center'}}/>
+        <FontAwesome name="circle" size={17} color="black" style={{alignSelf:'center'}}/>
         <Text style={styles.titlestyle}>
           {title}
         </Text>
@@ -34,15 +34,16 @@ const styles = StyleSheet.create({
     fontSize:20,
     fontWeight : 'bold',
     marginLeft : 10,
-    // borderColor : 'black',
+    // borderColor : 'red',
     // borderWidth : 1
   },
   viewstyle: {
     flexDirection : 'row',
     //marginBottom : 10,
-    alignContent : 'center',
-    // borderColor : 'black',
-    // borderWidth : 1
+    marginRight : 5,
+    alignContent : 'stretch',
+    borderColor : 'white',
+    borderWidth : 1
   }
 });
 

@@ -16,7 +16,7 @@ const TitlewithoutImage = ({title}) => {
 
 const styles = StyleSheet.create({
   titlestyle:{
-    fontSize:25,
+    fontSize:21,
     fontWeight:'bold', 
     color:'black',
     // borderWidth: 1,
@@ -25,8 +25,9 @@ const styles = StyleSheet.create({
   },
   btboxview:{
     flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
-    height : 70,
+    //backgroundColor : '#FDF6E3',
+    backgroundColor:'#D5DCE9',
+    height : 60,
     margin : 15,
     borderRadius : 20,
     //alignSelf: 'center',

@@ -4,15 +4,18 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
-const Numhead = ({title}) => {
+const Numhead = ({title,text,text2}) => {
   return (
     <View style={styles.exliststyle}>
       <View style = {styles.viewstyle}>
-        <MaterialCommunityIcons name="numeric-1-circle-outline" size={25} color="black" style={{alignSelf:'center',fontWeight:'bold'}}/>
+        <MaterialCommunityIcons name={text2} size={20} color="black" style={{alignSelf:'center'}}/>
         <Text style={styles.titlestyle}>
           {title}
         </Text>
-      </View>  
+      </View>
+      <Text style={styles.textstyle}>
+        {text}
+      </Text>   
     </View>
   );
 };
@@ -29,10 +32,20 @@ const styles = StyleSheet.create({
     // paddingHorizontal : 20,
     padding : 10
   },
+  textstyle: {
+    fontSize:20,
+    color:'black',
+    //paddingHorizontal: 10,
+    flex:1,
+    margin : 5,
+    //alignSelf: 'center'
+    textAlign: 'auto',
+    lineHeight:30
+  },
   titlestyle:{
     alignSelf : 'center',
     //marginLeft : 10,
-    fontSize:22,
+    fontSize:20,
     fontWeight : 'bold',
     marginLeft : 10,
     // borderColor : 'black',
@@ -40,7 +53,7 @@ const styles = StyleSheet.create({
   },
   viewstyle: {
     flexDirection : 'row',
-    //marginBottom : 10,
+    marginBottom : 10,
     alignContent : 'center',
     // borderColor : 'black',
     // borderWidth : 1

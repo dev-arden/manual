@@ -23,7 +23,7 @@ const manual6 = ({navigation}) => {
     <SafeAreaView style={{flex:1}}>
       <View style = {styles.btboxview}> 
         <Text style={styles.titlestyle} >
-          비문해 맞춤 상담
+          비문해맞춤상담
         </Text>
       </View>
         <FlatList 
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   },
   btboxview:{
     flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
+    backgroundColor : '#F2E4B9',
     height : 60,
     margin : 15,
     borderRadius : 20,

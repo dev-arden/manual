@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View, StyleSheet, FlatList} from 'react-native';
+import {Text, View, StyleSheet, FlatList,SafeAreaView} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Fontisto from 'react-native-vector-icons/Fontisto';
@@ -7,48 +7,62 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import TitlewithoutImage2 from '../components/TitlewithoutImage2';
+
 
 const counseltype = ({navigation}) => {
   const type = [
     {
       id: '1',
-      title: '표준 상담',
-      icon : <Ionicons name="man" size={30} />
+      title: '표준상담',
+      //icon : <Ionicons name="man" size={30} color='#EFC8AC'/>
+      icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="#DF9364"/>
     },
     {
       id: '2',
-      title: '시각 맞춤 상담',
-      icon : <FontAwesome name="blind" size={30} />
+      title: '시각맞춤상담',
+      //icon : <FontAwesome name="blind" size={30} color='#EFC8AC'/>
+      icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="#DF9364"/>
     },
     {
       id: '3',
-      title: '청각 맞춤 상담',
-      icon : <FontAwesome5 name="deaf" size={30} />
+      title: '청각맞춤상담',
+      //icon : <FontAwesome5 name="deaf" size={30} color='#EFC8AC'/>
+      icon : <MaterialCommunityIcons name="numeric-3-box" size={25} color="#DF9364"/>
     },
     {
       id: '4',
-      title: '신체 맞춤 상담',
-      icon : <Fontisto name="paralysis-disability" size={30} />
+      title: '신체맞춤상담',
+      //icon : <Fontisto name="paralysis-disability" size={30} color='#EFC8AC'/>
+      icon : <MaterialCommunityIcons name="numeric-4-box" size={25} color="#DF9364"/>
     },
     {
       id: '5',
-      title: '인지 맞춤 상담',
-      icon : <MaterialCommunityIcons name="brain" size={30} />
+      title: '인지맞춤상담',
+      //icon : <MaterialCommunityIcons name="brain" size={30} color='#EFC8AC'/>
+      icon : <MaterialCommunityIcons name="numeric-5-box" size={25} color="#DF9364"/>
     },
     {
       id: '6',
-      title: '비문해 맞춤 상담',
-      icon : <Ionicons name="language" size={30} />
+      title: '비문해맞춤상담',
+      //icon : <Ionicons name="language" size={30} color='#EFC8AC'/>
+      icon : <MaterialCommunityIcons name="numeric-6-box" size={25} color="#DF9364"/>
     },
     {
       id: '7',
-      title: '외국인 맞춤 상담',
-      icon : <Ionicons name="earth" size={30} />
+      title: '외국인맞춤상담',
+      //icon : <Ionicons name="earth" size={30} color='#EFC8AC'/>
+      icon : <MaterialCommunityIcons name="numeric-7-box" size={25} color="#DF9364"/>
     }
   ];
 
   return (
-    <View style = {styles.viewstyle}>
+    <SafeAreaView style={{flex:1}}>
+      <View style = {styles.btboxview}> 
+        <Text style={styles.titlestyle} >
+          사전연명의료의향서 맞춤상담매뉴얼
+        </Text>
+      </View>
       <FlatList 
         keyExtractor = {(item)=> item.id}
         data = {type}
@@ -71,7 +85,7 @@ const counseltype = ({navigation}) => {
           </TouchableOpacity>
         }
       />
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -104,9 +118,10 @@ const styles = StyleSheet.create({
     paddingHorizontal : 20,
     flexDirection : 'row'
   },
+  
   btboxview:{
     flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
+    backgroundColor : '#FAE7D3',
     height : 60,
     margin : 15,
     borderRadius : 20,
@@ -120,7 +135,7 @@ const styles = StyleSheet.create({
     justifyContent : 'center'
   },
   titlestyle:{
-    fontSize:25,
+    fontSize:21,
     fontWeight:'bold', 
     color:'black',
     // borderWidth: 1,

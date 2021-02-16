@@ -9,13 +9,13 @@ const manual7 = ({navigation}) => {
       id: '1',
       title : '외국인 맞춤 상담',
       nav : 'foreign1',
-      icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-1-box" size={25} color="#C96661"/>
     },
     {
       id: '2',
       title: '사전연명의료의향서 작성',
       nav : 'foreignmanual',
-      icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="orange"/>
+      icon : <MaterialCommunityIcons name="numeric-2-box" size={25} color="#C96661"/>
     },
   ];
 
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   },
   btboxview:{
     flexDirection : 'row',
-    backgroundColor : '#FDF6E3',
+    backgroundColor : '#EAC6C0',
     height : 60,
     margin : 15,
     borderRadius : 20,
